@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autorizacia.cs" />
     <Compile Include="Courses.cs">
       <SubType>UserControl</SubType>
     </Compile>

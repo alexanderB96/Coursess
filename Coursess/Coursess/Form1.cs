@@ -15,7 +15,9 @@ namespace Coursess
         public Form1()
         {
             InitializeComponent();
-        }
+            Autorizacia at = new Autorizacia();
+                at.Aut(this);
+       }
 
         void Poloz(object sender) //положение индикатора
         {

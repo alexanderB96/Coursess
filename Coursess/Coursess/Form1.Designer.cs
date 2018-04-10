@@ -39,16 +39,21 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.ident = new System.Windows.Forms.PictureBox();
+            this.courses1 = new Coursess.Courses();
+            this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ident)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel3
             // 
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.Controls.Add(this.courses1);
             this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
@@ -64,6 +69,7 @@
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.ident);
             this.bunifuGradientPanel2.Controls.Add(this.indicator);
             this.bunifuGradientPanel2.Controls.Add(this.bunifuFlatButton4);
             this.bunifuGradientPanel2.Controls.Add(this.Prepod);
@@ -111,13 +117,13 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(31, 204);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(12, 204);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(169, 48);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(188, 48);
             this.bunifuFlatButton4.TabIndex = 3;
             this.bunifuFlatButton4.Text = "Резерв";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,6 +282,24 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // ident
+            // 
+            this.ident.BackColor = System.Drawing.Color.Magenta;
+            this.ident.Location = new System.Drawing.Point(0, 397);
+            this.ident.Name = "ident";
+            this.ident.Size = new System.Drawing.Size(5, 3);
+            this.ident.TabIndex = 5;
+            this.ident.TabStop = false;
+            // 
+            // courses1
+            // 
+            this.courses1.BackColor = System.Drawing.Color.Transparent;
+            this.courses1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.courses1.Location = new System.Drawing.Point(0, 0);
+            this.courses1.Name = "courses1";
+            this.courses1.Size = new System.Drawing.Size(565, 400);
+            this.courses1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,12 +310,15 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ident)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,6 +335,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton Courses;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox indicator;
+        public System.Windows.Forms.PictureBox ident;
+        private Courses courses1;
     }
 }
 

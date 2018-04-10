@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.Framework.UI;
 
 namespace Coursess
 {
@@ -15,6 +16,8 @@ namespace Coursess
         public Courses()
         {
             InitializeComponent();
+            Autorizacia dn = new Autorizacia();
+            dn.danniy(this);
         }
     }
 }

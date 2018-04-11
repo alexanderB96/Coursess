@@ -17,7 +17,10 @@ namespace Coursess
             InitializeComponent();
             Autorizacia at = new Autorizacia();
                 at.Aut(this);
-       }
+            courses1.Visible = true;
+            rezerv1.Visible = false;
+            // Home_Click(null, null);
+        }
 
         void Poloz(object sender) //положение индикатора
         {
@@ -33,11 +36,15 @@ namespace Coursess
         private void Home_Click(object sender, EventArgs e)
         {
             Poloz(sender);
+            courses1.Visible = true;
+            rezerv1.Visible = false;
         }
 
         private void Courses_Click(object sender, EventArgs e)
         {
             Poloz(sender);
+            courses1.Visible = false;
+            rezerv1.Visible = false;
         }
 
         private void Prepod_Click(object sender, EventArgs e)
@@ -48,6 +55,13 @@ namespace Coursess
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             Poloz(sender);
+            // rezerv1.Refresh(); // не работает
+          //  UserControl rezerv1 = new UserControl();
+            rezerv1.Visible = true;
+            courses1.Visible = false;
+          
+
+
         }
 
         /* private void bunifuFlatButton1_Click(object sender, EventArgs e)

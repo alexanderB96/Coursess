@@ -52,5 +52,56 @@ namespace Coursess
             courses.DataCourses.DataSource = ds.Tables[0];
             cnn.Close();
         }
+
+        public void rezerv0(Rezerv rezerv)
+        {
+
+            cnn.Open();
+            zapros = (" SELECT Name_Otdela AS[Факультет] FROM Courses.dbo.Otdelenie");
+            SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Otdelenie");
+            rezerv.DataOtdelenie.DataSource = ds.Tables[0];
+            cnn.Close();
+
+        }
+
+        public void rezerv1(Rezerv rezerv)
+        {
+            cnn.Open();
+            zapros = (" SELECT Name_Predmeta AS [Предмет], Price AS [Цена] FROM Courses.dbo.Predmet");
+            SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Predmet");
+            rezerv.DataPredmet.DataSource = ds.Tables[0];
+            cnn.Close();
+        }
+
+        public void dobFak(Rezerv rezerv)
+        {
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = "INSERT INTO Otdelenie (Name_Otdela) VALUES  (@Name_Otdela)";
+            comand.Parameters.AddWithValue("@Name_Otdela", Convert.ToString(rezerv.dobFak.Text));
+            comand.ExecuteNonQuery();
+            cnn.Close();
+            
+           
+        }
+
+        public void dobPred(Rezerv rezerv)
+        {
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = "INSERT INTO Predmet (Name_Predmeta, Price) VALUES  (@Name_Predmeta,@Price)";
+            comand.Parameters.AddWithValue("@Name_Predmeta", Convert.ToString(rezerv.dobNamePred.Text));
+            comand.Parameters.AddWithValue("@Price", Convert.ToString(rezerv.dobPricePred.Text));
+            comand.ExecuteNonQuery();
+            cnn.Close();
+
+
+        }
     }
 }

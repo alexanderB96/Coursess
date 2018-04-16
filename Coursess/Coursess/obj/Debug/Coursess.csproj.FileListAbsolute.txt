@@ -13,3 +13,4 @@ E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.pdb
 E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.csprojResolveAssemblyReference.cache
 E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.Rezerv.resources
 E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.Cours.resources
+E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.Prepodav.resources

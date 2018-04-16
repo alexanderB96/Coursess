@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.cours1 = new Coursess.Cours();
             this.rezerv1 = new Coursess.Rezerv();
             this.courses1 = new Coursess.Courses();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -42,7 +43,7 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.cours1 = new Coursess.Cours();
+            this.prepodav1 = new Coursess.Prepodav();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ident)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.Controls.Add(this.prepodav1);
             this.bunifuGradientPanel3.Controls.Add(this.cours1);
             this.bunifuGradientPanel3.Controls.Add(this.rezerv1);
             this.bunifuGradientPanel3.Controls.Add(this.courses1);
@@ -68,6 +70,15 @@
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(565, 400);
             this.bunifuGradientPanel3.TabIndex = 2;
+            // 
+            // cours1
+            // 
+            this.cours1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cours1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cours1.Location = new System.Drawing.Point(0, 0);
+            this.cours1.Name = "cours1";
+            this.cours1.Size = new System.Drawing.Size(565, 400);
+            this.cours1.TabIndex = 2;
             // 
             // rezerv1
             // 
@@ -314,14 +325,14 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // cours1
+            // prepodav1
             // 
-            this.cours1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cours1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cours1.Location = new System.Drawing.Point(0, 0);
-            this.cours1.Name = "cours1";
-            this.cours1.Size = new System.Drawing.Size(565, 400);
-            this.cours1.TabIndex = 2;
+            this.prepodav1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.prepodav1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prepodav1.Location = new System.Drawing.Point(0, 0);
+            this.prepodav1.Name = "prepodav1";
+            this.prepodav1.Size = new System.Drawing.Size(565, 400);
+            this.prepodav1.TabIndex = 3;
             // 
             // Form1
             // 
@@ -362,6 +373,7 @@
         private Courses courses1;
         private Rezerv rezerv1;
         private Cours cours1;
+        private Prepodav prepodav1;
     }
 }
 

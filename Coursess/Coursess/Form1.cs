@@ -17,9 +17,11 @@ namespace Coursess
             InitializeComponent();
             Autorizacia at = new Autorizacia();
                 at.Aut(this);
-            courses1.Visible = true;
+           courses1.Visible = true;
             rezerv1.Visible = false;
             cours1.Visible = false;
+            prepodav1.Visible = false;
+            
             // Home_Click(null, null);
         }
 
@@ -40,6 +42,7 @@ namespace Coursess
             courses1.Visible = true;
             rezerv1.Visible = false;
             cours1.Visible = false;
+            prepodav1.Visible = false;
         }
 
         private void Courses_Click(object sender, EventArgs e)
@@ -48,12 +51,20 @@ namespace Coursess
             courses1.Visible = false;
             rezerv1.Visible = false;
             cours1.Visible = true;
-            
+            prepodav1.Visible = false;
+
         }
 
         private void Prepod_Click(object sender, EventArgs e)
         {
             Poloz(sender);
+           
+            courses1.Visible = false;
+            rezerv1.Visible = false;
+            cours1.Visible = false;
+            prepodav1.Visible = true;
+
+
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
@@ -64,6 +75,7 @@ namespace Coursess
             rezerv1.Visible = true;
             courses1.Visible = false;
             cours1.Visible = false;
+            prepodav1.Visible = false;
 
 
 

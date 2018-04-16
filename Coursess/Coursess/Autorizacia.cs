@@ -29,22 +29,46 @@ namespace Coursess
 
         public void Schit (Cours cours)
     {
-           
+            try
+            {
                 using (StreamReader sr = new StreamReader(pfile))
                 {
                     sqltxt = sr.ReadToEnd();
                     cnn.Open();
-                     SqlDataAdapter da = new SqlDataAdapter(sqltxt, cnn);
+                    SqlDataAdapter da = new SqlDataAdapter(sqltxt, cnn);
                     SqlCommandBuilder cb = new SqlCommandBuilder(da);
                     DataSet ds = new DataSet();
                     da.Fill(ds, "Nagruzka");
                     cours.DataFull.DataSource = ds.Tables[0];
                     cnn.Close();
-
-
                 }
-            
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
     }
+
+        public void Prepod (Prepodav prepodav)
+        {
+            try
+            {
+                  cnn.Open();
+                    zapros = (" SELECT CONCAT(Family, ' ', Name,' ' , Surname) AS [ФИО], Phone AS [Телефон], Stazh AS [Стаж] FROM Courses.dbo.Prepodavateli");
+                    SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+                    SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "Prepodavateli");
+                    prepodav.DataPrepodavatel.DataSource = ds.Tables[0];
+                    cnn.Close();
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
 
         public void Aut(Form1 form) // проверка коннекта
         {

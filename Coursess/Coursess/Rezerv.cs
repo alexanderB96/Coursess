@@ -18,6 +18,7 @@ namespace Coursess
             InitializeComponent();
             aut.rezerv0(this);
             aut.rezerv1(this);
+           // aut.Schit(this);
             
         }
         public void Ref (Rezerv rezerv)

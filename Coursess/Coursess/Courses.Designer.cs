@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Courses));
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.DataCourses = new System.Windows.Forms.DataGridView();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.DataCourses = new System.Windows.Forms.DataGridView();
             this.bunifuGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataCourses)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataCourses)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -54,22 +54,6 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(565, 400);
             this.bunifuGradientPanel2.TabIndex = 2;
-            // 
-            // DataCourses
-            // 
-            this.DataCourses.AllowUserToAddRows = false;
-            this.DataCourses.AllowUserToDeleteRows = false;
-            this.DataCourses.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DataCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
-            this.DataCourses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.DataCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataCourses.Location = new System.Drawing.Point(0, 28);
-            this.DataCourses.Name = "DataCourses";
-            this.DataCourses.ReadOnly = true;
-            this.DataCourses.RowHeadersVisible = false;
-            this.DataCourses.Size = new System.Drawing.Size(565, 150);
-            this.DataCourses.TabIndex = 0;
             // 
             // bunifuGradientPanel1
             // 
@@ -100,6 +84,23 @@
             this.bunifuCustomLabel2.TabIndex = 3;
             this.bunifuCustomLabel2.Text = "Открытые курсы";
             // 
+            // DataCourses
+            // 
+            this.DataCourses.AllowUserToAddRows = false;
+            this.DataCourses.AllowUserToDeleteRows = false;
+            this.DataCourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataCourses.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DataCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.DataCourses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataCourses.Location = new System.Drawing.Point(0, 28);
+            this.DataCourses.Name = "DataCourses";
+            this.DataCourses.ReadOnly = true;
+            this.DataCourses.RowHeadersVisible = false;
+            this.DataCourses.Size = new System.Drawing.Size(565, 150);
+            this.DataCourses.TabIndex = 0;
+            // 
             // Courses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,9 +110,9 @@
             this.Name = "Courses";
             this.Size = new System.Drawing.Size(565, 400);
             this.bunifuGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataCourses)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataCourses)).EndInit();
             this.ResumeLayout(false);
 
         }

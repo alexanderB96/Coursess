@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>C:\Users\Александр\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -51,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autorizacia.cs" />
+    <Compile Include="Cours.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cours.Designer.cs">
+      <DependentUpon>Cours.cs</DependentUpon>
+    </Compile>
     <Compile Include="Courses.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +86,9 @@
     <Compile Include="Rezerv.Designer.cs">
       <DependentUpon>Rezerv.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cours.resx">
+      <DependentUpon>Cours.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Courses.resx">
       <DependentUpon>Courses.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Red_cross_tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FullInfo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

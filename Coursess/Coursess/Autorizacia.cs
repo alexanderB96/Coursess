@@ -8,17 +8,43 @@ using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
 using Bunifu.Framework.UI;
+using System.IO;
 
 namespace Coursess
 {
     class Autorizacia
     {
         Form1 form;
+        Cours cours;
+        Rezerv rezerv;
+
         public string str = null;
         public SqlConnection cnn = new SqlConnection(@"Data Source=АЛЕКСАНДР-ПК; Initial Catalog = Courses; Integrated Security=SSPI;");
         public SqlCommand comand;
         public string zapros;
+        string pfile = "FullInfo.txt";
+        public string sqltxt;
 
+        
+
+        public void Schit (Cours cours)
+    {
+           
+                using (StreamReader sr = new StreamReader(pfile))
+                {
+                    sqltxt = sr.ReadToEnd();
+                    cnn.Open();
+                     SqlDataAdapter da = new SqlDataAdapter(sqltxt, cnn);
+                    SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "Nagruzka");
+                    cours.DataFull.DataSource = ds.Tables[0];
+                    cnn.Close();
+
+
+                }
+            
+    }
 
         public void Aut(Form1 form) // проверка коннекта
         {

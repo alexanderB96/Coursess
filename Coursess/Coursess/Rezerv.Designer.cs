@@ -43,7 +43,9 @@
             // 
             this.DataPredmet.AllowUserToAddRows = false;
             this.DataPredmet.AllowUserToDeleteRows = false;
+            this.DataPredmet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataPredmet.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DataPredmet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataPredmet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataPredmet.Location = new System.Drawing.Point(3, 3);
             this.DataPredmet.Name = "DataPredmet";
@@ -57,7 +59,9 @@
             this.DataOtdelenie.AllowUserToAddRows = false;
             this.DataOtdelenie.AllowUserToDeleteRows = false;
             this.DataOtdelenie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataOtdelenie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataOtdelenie.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DataOtdelenie.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataOtdelenie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataOtdelenie.Location = new System.Drawing.Point(371, 3);
             this.DataOtdelenie.Name = "DataOtdelenie";
@@ -88,7 +92,7 @@
             this.ButtDobFak.IconVisible = true;
             this.ButtDobFak.IconZoom = 90D;
             this.ButtDobFak.IsTab = false;
-            this.ButtDobFak.Location = new System.Drawing.Point(365, 211);
+            this.ButtDobFak.Location = new System.Drawing.Point(365, 214);
             this.ButtDobFak.Name = "ButtDobFak";
             this.ButtDobFak.Normalcolor = System.Drawing.Color.Transparent;
             this.ButtDobFak.OnHovercolor = System.Drawing.Color.Transparent;
@@ -167,7 +171,7 @@
             this.dobPricePred.Name = "dobPricePred";
             this.dobPricePred.Size = new System.Drawing.Size(191, 20);
             this.dobPricePred.TabIndex = 6;
-            this.dobPricePred.Text = "стоимсть предмета ...";
+            this.dobPricePred.Text = "стоимость предмета ...";
             this.dobPricePred.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dobPricePred.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dobPricePred_MouseClick);
             // 

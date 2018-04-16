@@ -19,6 +19,7 @@ namespace Coursess
                 at.Aut(this);
             courses1.Visible = true;
             rezerv1.Visible = false;
+            cours1.Visible = false;
             // Home_Click(null, null);
         }
 
@@ -38,6 +39,7 @@ namespace Coursess
             Poloz(sender);
             courses1.Visible = true;
             rezerv1.Visible = false;
+            cours1.Visible = false;
         }
 
         private void Courses_Click(object sender, EventArgs e)
@@ -45,6 +47,8 @@ namespace Coursess
             Poloz(sender);
             courses1.Visible = false;
             rezerv1.Visible = false;
+            cours1.Visible = true;
+            
         }
 
         private void Prepod_Click(object sender, EventArgs e)
@@ -59,7 +63,8 @@ namespace Coursess
           //  UserControl rezerv1 = new UserControl();
             rezerv1.Visible = true;
             courses1.Visible = false;
-          
+            cours1.Visible = false;
+
 
 
         }

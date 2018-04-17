@@ -28,182 +28,237 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DataPredmet = new System.Windows.Forms.DataGridView();
-            this.DataOtdelenie = new System.Windows.Forms.DataGridView();
-            this.ButtDobFak = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dobFak = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.dobNamePred = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.buttDobPred = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dobPricePred = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            ((System.ComponentModel.ISupportInitialize)(this.DataPredmet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataOtdelenie)).BeginInit();
+            this.ButtPredmAct = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ButtFakAct = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ButtSpecAct = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.indicatorRez = new System.Windows.Forms.PictureBox();
+            this.dobSpec1 = new Coursess.dobSpec();
+            this.dobFak1 = new Coursess.dobFak();
+            this.dobPredm1 = new Coursess.dobPredm();
+            this.dobType1 = new Coursess.dobType();
+            ((System.ComponentModel.ISupportInitialize)(this.indicatorRez)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataPredmet
+            // ButtPredmAct
             // 
-            this.DataPredmet.AllowUserToAddRows = false;
-            this.DataPredmet.AllowUserToDeleteRows = false;
-            this.DataPredmet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataPredmet.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DataPredmet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataPredmet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataPredmet.Location = new System.Drawing.Point(3, 3);
-            this.DataPredmet.Name = "DataPredmet";
-            this.DataPredmet.ReadOnly = true;
-            this.DataPredmet.RowHeadersVisible = false;
-            this.DataPredmet.Size = new System.Drawing.Size(230, 150);
-            this.DataPredmet.TabIndex = 0;
+            this.ButtPredmAct.Activecolor = System.Drawing.Color.Transparent;
+            this.ButtPredmAct.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ButtPredmAct.BackColor = System.Drawing.Color.Transparent;
+            this.ButtPredmAct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtPredmAct.BorderRadius = 0;
+            this.ButtPredmAct.ButtonText = "Предмет";
+            this.ButtPredmAct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtPredmAct.DisabledColor = System.Drawing.Color.Gray;
+            this.ButtPredmAct.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ButtPredmAct.Iconcolor = System.Drawing.Color.Transparent;
+            this.ButtPredmAct.Iconimage = null;
+            this.ButtPredmAct.Iconimage_right = null;
+            this.ButtPredmAct.Iconimage_right_Selected = null;
+            this.ButtPredmAct.Iconimage_Selected = null;
+            this.ButtPredmAct.IconMarginLeft = 0;
+            this.ButtPredmAct.IconMarginRight = 0;
+            this.ButtPredmAct.IconRightVisible = true;
+            this.ButtPredmAct.IconRightZoom = 0D;
+            this.ButtPredmAct.IconVisible = true;
+            this.ButtPredmAct.IconZoom = 90D;
+            this.ButtPredmAct.IsTab = false;
+            this.ButtPredmAct.Location = new System.Drawing.Point(3, 25);
+            this.ButtPredmAct.Name = "ButtPredmAct";
+            this.ButtPredmAct.Normalcolor = System.Drawing.Color.Transparent;
+            this.ButtPredmAct.OnHovercolor = System.Drawing.Color.Transparent;
+            this.ButtPredmAct.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.ButtPredmAct.selected = false;
+            this.ButtPredmAct.Size = new System.Drawing.Size(112, 48);
+            this.ButtPredmAct.TabIndex = 6;
+            this.ButtPredmAct.Text = "Предмет";
+            this.ButtPredmAct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtPredmAct.Textcolor = System.Drawing.Color.DimGray;
+            this.ButtPredmAct.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtPredmAct.Click += new System.EventHandler(this.ButtPredmAct_Click);
             // 
-            // DataOtdelenie
+            // ButtFakAct
             // 
-            this.DataOtdelenie.AllowUserToAddRows = false;
-            this.DataOtdelenie.AllowUserToDeleteRows = false;
-            this.DataOtdelenie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataOtdelenie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataOtdelenie.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DataOtdelenie.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataOtdelenie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataOtdelenie.Location = new System.Drawing.Point(371, 3);
-            this.DataOtdelenie.Name = "DataOtdelenie";
-            this.DataOtdelenie.ReadOnly = true;
-            this.DataOtdelenie.RowHeadersVisible = false;
-            this.DataOtdelenie.Size = new System.Drawing.Size(191, 150);
-            this.DataOtdelenie.TabIndex = 1;
+            this.ButtFakAct.Activecolor = System.Drawing.Color.Transparent;
+            this.ButtFakAct.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ButtFakAct.BackColor = System.Drawing.Color.Transparent;
+            this.ButtFakAct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtFakAct.BorderRadius = 0;
+            this.ButtFakAct.ButtonText = "Факультет";
+            this.ButtFakAct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtFakAct.DisabledColor = System.Drawing.Color.Gray;
+            this.ButtFakAct.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ButtFakAct.Iconcolor = System.Drawing.Color.Transparent;
+            this.ButtFakAct.Iconimage = null;
+            this.ButtFakAct.Iconimage_right = null;
+            this.ButtFakAct.Iconimage_right_Selected = null;
+            this.ButtFakAct.Iconimage_Selected = null;
+            this.ButtFakAct.IconMarginLeft = 0;
+            this.ButtFakAct.IconMarginRight = 0;
+            this.ButtFakAct.IconRightVisible = true;
+            this.ButtFakAct.IconRightZoom = 0D;
+            this.ButtFakAct.IconVisible = true;
+            this.ButtFakAct.IconZoom = 90D;
+            this.ButtFakAct.IsTab = false;
+            this.ButtFakAct.Location = new System.Drawing.Point(121, 25);
+            this.ButtFakAct.Name = "ButtFakAct";
+            this.ButtFakAct.Normalcolor = System.Drawing.Color.Transparent;
+            this.ButtFakAct.OnHovercolor = System.Drawing.Color.Transparent;
+            this.ButtFakAct.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.ButtFakAct.selected = false;
+            this.ButtFakAct.Size = new System.Drawing.Size(112, 48);
+            this.ButtFakAct.TabIndex = 7;
+            this.ButtFakAct.Text = "Факультет";
+            this.ButtFakAct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtFakAct.Textcolor = System.Drawing.Color.DimGray;
+            this.ButtFakAct.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ButtFakAct.Click += new System.EventHandler(this.ButtFakAct_Click);
             // 
-            // ButtDobFak
+            // ButtSpecAct
             // 
-            this.ButtDobFak.Activecolor = System.Drawing.Color.Transparent;
-            this.ButtDobFak.BackColor = System.Drawing.Color.Transparent;
-            this.ButtDobFak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ButtDobFak.BorderRadius = 0;
-            this.ButtDobFak.ButtonText = "Добавить факультет";
-            this.ButtDobFak.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtDobFak.DisabledColor = System.Drawing.Color.Gray;
-            this.ButtDobFak.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.ButtDobFak.Iconcolor = System.Drawing.Color.Transparent;
-            this.ButtDobFak.Iconimage = null;
-            this.ButtDobFak.Iconimage_right = null;
-            this.ButtDobFak.Iconimage_right_Selected = null;
-            this.ButtDobFak.Iconimage_Selected = null;
-            this.ButtDobFak.IconMarginLeft = 0;
-            this.ButtDobFak.IconMarginRight = 0;
-            this.ButtDobFak.IconRightVisible = true;
-            this.ButtDobFak.IconRightZoom = 0D;
-            this.ButtDobFak.IconVisible = true;
-            this.ButtDobFak.IconZoom = 90D;
-            this.ButtDobFak.IsTab = false;
-            this.ButtDobFak.Location = new System.Drawing.Point(365, 214);
-            this.ButtDobFak.Name = "ButtDobFak";
-            this.ButtDobFak.Normalcolor = System.Drawing.Color.Transparent;
-            this.ButtDobFak.OnHovercolor = System.Drawing.Color.Transparent;
-            this.ButtDobFak.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.ButtDobFak.selected = false;
-            this.ButtDobFak.Size = new System.Drawing.Size(197, 48);
-            this.ButtDobFak.TabIndex = 2;
-            this.ButtDobFak.Text = "Добавить факультет";
-            this.ButtDobFak.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ButtDobFak.Textcolor = System.Drawing.Color.DimGray;
-            this.ButtDobFak.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtDobFak.Click += new System.EventHandler(this.ButtDobFak_Click);
+            this.ButtSpecAct.Activecolor = System.Drawing.Color.Transparent;
+            this.ButtSpecAct.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ButtSpecAct.BackColor = System.Drawing.Color.Transparent;
+            this.ButtSpecAct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtSpecAct.BorderRadius = 0;
+            this.ButtSpecAct.ButtonText = "Специальность";
+            this.ButtSpecAct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtSpecAct.DisabledColor = System.Drawing.Color.Gray;
+            this.ButtSpecAct.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.ButtSpecAct.Iconcolor = System.Drawing.Color.Transparent;
+            this.ButtSpecAct.Iconimage = null;
+            this.ButtSpecAct.Iconimage_right = null;
+            this.ButtSpecAct.Iconimage_right_Selected = null;
+            this.ButtSpecAct.Iconimage_Selected = null;
+            this.ButtSpecAct.IconMarginLeft = 0;
+            this.ButtSpecAct.IconMarginRight = 0;
+            this.ButtSpecAct.IconRightVisible = true;
+            this.ButtSpecAct.IconRightZoom = 0D;
+            this.ButtSpecAct.IconVisible = true;
+            this.ButtSpecAct.IconZoom = 90D;
+            this.ButtSpecAct.IsTab = false;
+            this.ButtSpecAct.Location = new System.Drawing.Point(239, 25);
+            this.ButtSpecAct.Name = "ButtSpecAct";
+            this.ButtSpecAct.Normalcolor = System.Drawing.Color.Transparent;
+            this.ButtSpecAct.OnHovercolor = System.Drawing.Color.Transparent;
+            this.ButtSpecAct.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.ButtSpecAct.selected = false;
+            this.ButtSpecAct.Size = new System.Drawing.Size(159, 48);
+            this.ButtSpecAct.TabIndex = 8;
+            this.ButtSpecAct.Text = "Специальность";
+            this.ButtSpecAct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ButtSpecAct.Textcolor = System.Drawing.Color.DimGray;
+            this.ButtSpecAct.TextFont = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.ButtSpecAct.Click += new System.EventHandler(this.ButtSpecAct_Click);
             // 
-            // dobFak
+            // bunifuFlatButton1
             // 
-            this.dobFak.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobFak.Location = new System.Drawing.Point(371, 171);
-            this.dobFak.Name = "dobFak";
-            this.dobFak.Size = new System.Drawing.Size(191, 20);
-            this.dobFak.TabIndex = 3;
-            this.dobFak.Text = "название факультета ...";
-            this.dobFak.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dobFak.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dobFak_MouseClick);
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Тип занятия";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(403, 25);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(159, 48);
+            this.bunifuFlatButton1.TabIndex = 13;
+            this.bunifuFlatButton1.Text = "Тип занятия";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // dobNamePred
+            // indicatorRez
             // 
-            this.dobNamePred.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobNamePred.Location = new System.Drawing.Point(30, 159);
-            this.dobNamePred.Name = "dobNamePred";
-            this.dobNamePred.Size = new System.Drawing.Size(191, 20);
-            this.dobNamePred.TabIndex = 5;
-            this.dobNamePred.Text = "название предмета ...";
-            this.dobNamePred.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dobNamePred.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dobNamePred_MouseClick);
+            this.indicatorRez.BackColor = System.Drawing.Color.Magenta;
+            this.indicatorRez.Location = new System.Drawing.Point(3, 68);
+            this.indicatorRez.Name = "indicatorRez";
+            this.indicatorRez.Size = new System.Drawing.Size(42, 5);
+            this.indicatorRez.TabIndex = 14;
+            this.indicatorRez.TabStop = false;
             // 
-            // buttDobPred
+            // dobSpec1
             // 
-            this.buttDobPred.Activecolor = System.Drawing.Color.Transparent;
-            this.buttDobPred.BackColor = System.Drawing.Color.Transparent;
-            this.buttDobPred.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttDobPred.BorderRadius = 0;
-            this.buttDobPred.ButtonText = "Добавить предмет";
-            this.buttDobPred.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttDobPred.DisabledColor = System.Drawing.Color.Gray;
-            this.buttDobPred.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.buttDobPred.Iconcolor = System.Drawing.Color.Transparent;
-            this.buttDobPred.Iconimage = null;
-            this.buttDobPred.Iconimage_right = null;
-            this.buttDobPred.Iconimage_right_Selected = null;
-            this.buttDobPred.Iconimage_Selected = null;
-            this.buttDobPred.IconMarginLeft = 0;
-            this.buttDobPred.IconMarginRight = 0;
-            this.buttDobPred.IconRightVisible = true;
-            this.buttDobPred.IconRightZoom = 0D;
-            this.buttDobPred.IconVisible = true;
-            this.buttDobPred.IconZoom = 90D;
-            this.buttDobPred.IsTab = false;
-            this.buttDobPred.Location = new System.Drawing.Point(24, 211);
-            this.buttDobPred.Name = "buttDobPred";
-            this.buttDobPred.Normalcolor = System.Drawing.Color.Transparent;
-            this.buttDobPred.OnHovercolor = System.Drawing.Color.Transparent;
-            this.buttDobPred.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.buttDobPred.selected = false;
-            this.buttDobPred.Size = new System.Drawing.Size(197, 48);
-            this.buttDobPred.TabIndex = 4;
-            this.buttDobPred.Text = "Добавить предмет";
-            this.buttDobPred.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.buttDobPred.Textcolor = System.Drawing.Color.DimGray;
-            this.buttDobPred.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttDobPred.Click += new System.EventHandler(this.buttDobPred_Click);
+            this.dobSpec1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dobSpec1.Location = new System.Drawing.Point(0, 90);
+            this.dobSpec1.Name = "dobSpec1";
+            this.dobSpec1.Size = new System.Drawing.Size(565, 310);
+            this.dobSpec1.TabIndex = 12;
             // 
-            // dobPricePred
+            // dobFak1
             // 
-            this.dobPricePred.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobPricePred.Location = new System.Drawing.Point(30, 185);
-            this.dobPricePred.Name = "dobPricePred";
-            this.dobPricePred.Size = new System.Drawing.Size(191, 20);
-            this.dobPricePred.TabIndex = 6;
-            this.dobPricePred.Text = "стоимость предмета ...";
-            this.dobPricePred.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dobPricePred.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dobPricePred_MouseClick);
+            this.dobFak1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dobFak1.Location = new System.Drawing.Point(0, 90);
+            this.dobFak1.Name = "dobFak1";
+            this.dobFak1.Size = new System.Drawing.Size(565, 310);
+            this.dobFak1.TabIndex = 10;
+            // 
+            // dobPredm1
+            // 
+            this.dobPredm1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dobPredm1.Location = new System.Drawing.Point(0, 90);
+            this.dobPredm1.Name = "dobPredm1";
+            this.dobPredm1.Size = new System.Drawing.Size(565, 310);
+            this.dobPredm1.TabIndex = 4;
+            // 
+            // dobType1
+            // 
+            this.dobType1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dobType1.Location = new System.Drawing.Point(0, 90);
+            this.dobType1.Name = "dobType1";
+            this.dobType1.Size = new System.Drawing.Size(565, 310);
+            this.dobType1.TabIndex = 15;
             // 
             // Rezerv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Controls.Add(this.dobPricePred);
-            this.Controls.Add(this.dobNamePred);
-            this.Controls.Add(this.buttDobPred);
-            this.Controls.Add(this.dobFak);
-            this.Controls.Add(this.ButtDobFak);
-            this.Controls.Add(this.DataOtdelenie);
-            this.Controls.Add(this.DataPredmet);
+            this.Controls.Add(this.dobType1);
+            this.Controls.Add(this.indicatorRez);
+            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.dobSpec1);
+            this.Controls.Add(this.dobFak1);
+            this.Controls.Add(this.ButtSpecAct);
+            this.Controls.Add(this.ButtFakAct);
+            this.Controls.Add(this.ButtPredmAct);
+            this.Controls.Add(this.dobPredm1);
             this.Name = "Rezerv";
             this.Size = new System.Drawing.Size(565, 400);
-            ((System.ComponentModel.ISupportInitialize)(this.DataPredmet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataOtdelenie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.indicatorRez)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        public System.Windows.Forms.DataGridView DataPredmet;
-        public System.Windows.Forms.DataGridView DataOtdelenie;
-        public Bunifu.Framework.UI.BunifuFlatButton ButtDobFak;
-        public WindowsFormsControlLibrary1.BunifuCustomTextbox dobFak;
-        public WindowsFormsControlLibrary1.BunifuCustomTextbox dobNamePred;
-        public Bunifu.Framework.UI.BunifuFlatButton buttDobPred;
-        public WindowsFormsControlLibrary1.BunifuCustomTextbox dobPricePred;
+        private dobPredm dobPredm1;
+        public Bunifu.Framework.UI.BunifuFlatButton ButtPredmAct;
+        public Bunifu.Framework.UI.BunifuFlatButton ButtFakAct;
+        public Bunifu.Framework.UI.BunifuFlatButton ButtSpecAct;
+        private dobFak dobFak1;
+        private dobSpec dobSpec1;
+        public Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.PictureBox indicatorRez;
+        private dobType dobType1;
     }
 }

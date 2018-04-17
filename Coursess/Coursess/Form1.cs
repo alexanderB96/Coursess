@@ -28,6 +28,7 @@ namespace Coursess
         void Poloz(object sender) //положение индикатора
         {
             indicator.Top = ((Control)sender).Top;
+            indicator.Height = ((Control)sender).Height;
 
         }
 

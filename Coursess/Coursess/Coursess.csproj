@@ -66,6 +66,30 @@
     <Compile Include="Courses.Designer.cs">
       <DependentUpon>Courses.cs</DependentUpon>
     </Compile>
+    <Compile Include="dobFak.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dobFak.Designer.cs">
+      <DependentUpon>dobFak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dobPredm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dobPredm.Designer.cs">
+      <DependentUpon>dobPredm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dobSpec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dobSpec.Designer.cs">
+      <DependentUpon>dobSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dobType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dobType.Designer.cs">
+      <DependentUpon>dobType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +121,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Courses.resx">
       <DependentUpon>Courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dobFak.resx">
+      <DependentUpon>dobFak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dobPredm.resx">
+      <DependentUpon>dobPredm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dobSpec.resx">
+      <DependentUpon>dobSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dobType.resx">
+      <DependentUpon>dobType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

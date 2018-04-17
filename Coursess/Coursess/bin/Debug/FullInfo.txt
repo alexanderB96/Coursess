@@ -2,6 +2,7 @@
 Groups.Nomer_Group  AS [Номер группы]
   ,
   Nagruzka.Kolischestvo_chasov * Predmet.Price AS Цена
+,Nagruzka.Kolischestvo_chasov AS [Количество часов]
  ,CONCAT(Prepodavateli.Family, ' ' ,Prepodavateli.Name , ' ',Prepodavateli.Surname  ) AS [Преподаватель]
  ,TypeZanaytia.Name_Type AS [Тип занятия]
  ,Predmet.Name_Predmeta AS [Название предмета]

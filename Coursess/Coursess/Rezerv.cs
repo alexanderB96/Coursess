@@ -16,48 +16,69 @@ namespace Coursess
         public Rezerv()
         {
             InitializeComponent();
-            aut.rezerv0(this);
-            aut.rezerv1(this);
-           // aut.Schit(this);
-            
+
+            dobPredm1.Visible = false;
+            dobFak1.Visible = false;
+            dobSpec1.Visible = false;
+            dobType1.Visible = false;
+            indicatorRez.Visible = false;
+
+            // aut.Schit(this);
+
         }
+
+        void Polozrez(object sender) //положение индикатора
+        {
+            indicatorRez.Visible = true;
+            indicatorRez.Left = ((Control)sender).Left;
+            indicatorRez.Width = ((Control)sender).Width;
+        }
+
         public void Ref (Rezerv rezerv)
         {
             Invalidate();
         }
 
-        private void dobFak_MouseClick(object sender, MouseEventArgs e)
+       
+        private void ButtPredmAct_Click(object sender, EventArgs e)
         {
-            dobFak.Text = "";
-        }
-
-        private void dobNamePred_MouseClick(object sender, MouseEventArgs e)
-        {
-            dobNamePred.Text = "";
-        }
-
-        private void dobPricePred_MouseClick(object sender, MouseEventArgs e)
-        {
-            dobPricePred.Text = "";
-        }
-
-        private void ButtDobFak_Click(object sender, EventArgs e)
-        {
-           
-            aut.dobFak(this);
-            aut.rezerv0(this);
-            aut.rezerv1(this);
-            dobFak.Text = "название факультета ...";
+           Polozrez(sender);
+            aut.rezerv1(dobPredm1);
+            dobPredm1.Visible = true;
+            dobFak1.Visible = false;
+            dobSpec1.Visible = false;
+            dobType1.Visible = false;
 
         }
 
-        private void buttDobPred_Click(object sender, EventArgs e)
+        private void ButtFakAct_Click(object sender, EventArgs e)
         {
-            aut.dobPred(this);
-            aut.rezerv0(this);
-            aut.rezerv1(this);
-            dobNamePred.Text = "название предмета ...";
-            dobPricePred.Text = "стоимость предмета ...";
+            Polozrez(sender);
+            aut.rezerv0(dobFak1);
+            dobFak1.Visible = true;
+            dobPredm1.Visible = false;
+            dobSpec1.Visible = false;
+            dobType1.Visible = false;
+        }
+
+        private void ButtSpecAct_Click(object sender, EventArgs e)
+        {
+        Polozrez(sender);
+            aut.visSpec(dobSpec1);
+            dobSpec1.Visible = true;
+            dobFak1.Visible = false;
+            dobPredm1.Visible = false;
+            dobType1.Visible = false;
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Polozrez(sender);
+            aut.TipZan(dobType1);
+            dobType1.Visible = true;
+            dobSpec1.Visible = false;
+            dobFak1.Visible = false;
+            dobPredm1.Visible = false;
         }
     }
 }

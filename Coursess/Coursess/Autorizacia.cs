@@ -114,7 +114,7 @@ namespace Coursess
 
 
 
-        public void danniy(Courses courses)
+        public void danniy(Courses courses) //вывод информации во вкладку главное о курсах которые открыты
         {
             
             cnn.Open();
@@ -128,7 +128,7 @@ namespace Coursess
             cnn.Close();
         }
 
-        public void rezerv0(Rezerv rezerv)
+        public void rezerv0(dobFak dobFak)
         {
 
             cnn.Open();
@@ -137,12 +137,12 @@ namespace Coursess
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
             DataSet ds = new DataSet();
             da.Fill(ds, "Otdelenie");
-            rezerv.DataOtdelenie.DataSource = ds.Tables[0];
+            dobFak.DataOtdelenie.DataSource = ds.Tables[0];
             cnn.Close();
 
         }
 
-        public void rezerv1(Rezerv rezerv)
+        public void rezerv1(dobPredm dobPredm)
         {
             cnn.Open();
             zapros = (" SELECT Name_Predmeta AS [Предмет], Price AS [Цена] FROM Courses.dbo.Predmet");
@@ -150,29 +150,80 @@ namespace Coursess
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
             DataSet ds = new DataSet();
             da.Fill(ds, "Predmet");
-            rezerv.DataPredmet.DataSource = ds.Tables[0];
+            dobPredm.DataPredmet.DataSource = ds.Tables[0];
             cnn.Close();
         }
 
-        public void dobFak(Rezerv rezerv)
+        public void dobFakyltet(dobFak dobFak)
         {
             cnn.Open();
             comand = cnn.CreateCommand();
             comand.CommandText = "INSERT INTO Otdelenie (Name_Otdela) VALUES  (@Name_Otdela)";
-            comand.Parameters.AddWithValue("@Name_Otdela", Convert.ToString(rezerv.dobFak.Text));
+            comand.Parameters.AddWithValue("@Name_Otdela", Convert.ToString(dobFak.dobSpecialnosti.Text));
             comand.ExecuteNonQuery();
             cnn.Close();
             
            
         }
 
-        public void dobPred(Rezerv rezerv)
+        public void dobPred(dobPredm dobPredm)
         {
             cnn.Open();
             comand = cnn.CreateCommand();
             comand.CommandText = "INSERT INTO Predmet (Name_Predmeta, Price) VALUES  (@Name_Predmeta,@Price)";
-            comand.Parameters.AddWithValue("@Name_Predmeta", Convert.ToString(rezerv.dobNamePred.Text));
-            comand.Parameters.AddWithValue("@Price", Convert.ToString(rezerv.dobPricePred.Text));
+            comand.Parameters.AddWithValue("@Name_Predmeta", Convert.ToString(dobPredm.dobNamePred.Text));
+            comand.Parameters.AddWithValue("@Price", Convert.ToString(dobPredm.dobPricePred.Text));
+            comand.ExecuteNonQuery();
+            cnn.Close();
+
+
+        }
+
+        public void visSpec(dobSpec dobSpec)
+        {
+
+            cnn.Open();
+            zapros = (" SELECT Name_spec AS [Наименование специальности] FROM Courses.dbo.Specialnosti");
+            SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Specialnosti");
+            dobSpec.DataSpec.DataSource = ds.Tables[0];
+            cnn.Close();
+
+        }
+
+        public void dobSpecial(dobSpec dobSpec)
+        {
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = "INSERT INTO Specialnosti (Name_spec) VALUES  (@Name_spec)";
+            comand.Parameters.AddWithValue("@Name_spec", Convert.ToString(dobSpec.dobSpecialnost.Text));
+            comand.ExecuteNonQuery();
+            cnn.Close();
+
+
+        }
+        public void TipZan(dobType dobType)
+        {
+
+            cnn.Open();
+            zapros = ("SELECT Name_Type AS [Тип занятия] FROM Courses.dbo.TypeZanaytia");
+            SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "TypeZanaytia");
+            dobType.DataType.DataSource = ds.Tables[0];
+            cnn.Close();
+
+        }
+
+        public void dobTipZan(dobType dobType)
+        {
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = "INSERT INTO TypeZanaytia (Name_Type) VALUES  (@Name_Type)";
+            comand.Parameters.AddWithValue("@Name_Type", Convert.ToString(dobType.dobTypeTxt.Text));
             comand.ExecuteNonQuery();
             cnn.Close();
 

@@ -14,3 +14,7 @@ E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.csprojResolveAssemblyReference.
 E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.Rezerv.resources
 E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.Cours.resources
 E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.Prepodav.resources
+E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.dobFak.resources
+E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.dobPredm.resources
+E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.dobSpec.resources
+E:\Coursess\Coursess\Coursess\obj\Debug\Coursess.dobType.resources

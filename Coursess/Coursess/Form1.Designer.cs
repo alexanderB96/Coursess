@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.cours1 = new Coursess.Cours();
-            this.rezerv1 = new Coursess.Rezerv();
-            this.courses1 = new Coursess.Courses();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.ident = new System.Windows.Forms.PictureBox();
             this.indicator = new System.Windows.Forms.PictureBox();
@@ -44,6 +41,9 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.prepodav1 = new Coursess.Prepodav();
+            this.cours1 = new Coursess.Cours();
+            this.rezerv1 = new Coursess.Rezerv();
+            this.courses1 = new Coursess.Courses();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ident)).BeginInit();
@@ -70,33 +70,6 @@
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(565, 400);
             this.bunifuGradientPanel3.TabIndex = 2;
-            // 
-            // cours1
-            // 
-            this.cours1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cours1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cours1.Location = new System.Drawing.Point(0, 0);
-            this.cours1.Name = "cours1";
-            this.cours1.Size = new System.Drawing.Size(565, 400);
-            this.cours1.TabIndex = 2;
-            // 
-            // rezerv1
-            // 
-            this.rezerv1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rezerv1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rezerv1.Location = new System.Drawing.Point(0, 0);
-            this.rezerv1.Name = "rezerv1";
-            this.rezerv1.Size = new System.Drawing.Size(565, 400);
-            this.rezerv1.TabIndex = 1;
-            // 
-            // courses1
-            // 
-            this.courses1.BackColor = System.Drawing.Color.Transparent;
-            this.courses1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.courses1.Location = new System.Drawing.Point(0, 0);
-            this.courses1.Name = "courses1";
-            this.courses1.Size = new System.Drawing.Size(565, 400);
-            this.courses1.TabIndex = 0;
             // 
             // bunifuGradientPanel2
             // 
@@ -144,7 +117,7 @@
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Резерв";
+            this.bunifuFlatButton4.ButtonText = "Добавление";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -168,7 +141,7 @@
             this.bunifuFlatButton4.selected = false;
             this.bunifuFlatButton4.Size = new System.Drawing.Size(188, 48);
             this.bunifuFlatButton4.TabIndex = 3;
-            this.bunifuFlatButton4.Text = "Резерв";
+            this.bunifuFlatButton4.Text = "Добавление";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.DimGray;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -333,6 +306,33 @@
             this.prepodav1.Name = "prepodav1";
             this.prepodav1.Size = new System.Drawing.Size(565, 400);
             this.prepodav1.TabIndex = 3;
+            // 
+            // cours1
+            // 
+            this.cours1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cours1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cours1.Location = new System.Drawing.Point(0, 0);
+            this.cours1.Name = "cours1";
+            this.cours1.Size = new System.Drawing.Size(565, 400);
+            this.cours1.TabIndex = 2;
+            // 
+            // rezerv1
+            // 
+            this.rezerv1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rezerv1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rezerv1.Location = new System.Drawing.Point(0, 0);
+            this.rezerv1.Name = "rezerv1";
+            this.rezerv1.Size = new System.Drawing.Size(565, 400);
+            this.rezerv1.TabIndex = 1;
+            // 
+            // courses1
+            // 
+            this.courses1.BackColor = System.Drawing.Color.Transparent;
+            this.courses1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.courses1.Location = new System.Drawing.Point(0, 0);
+            this.courses1.Name = "courses1";
+            this.courses1.Size = new System.Drawing.Size(565, 400);
+            this.courses1.TabIndex = 0;
             // 
             // Form1
             // 

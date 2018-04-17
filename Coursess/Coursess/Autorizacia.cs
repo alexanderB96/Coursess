@@ -23,9 +23,11 @@ namespace Coursess
         public SqlCommand comand;
         public string zapros;
         string pfile = "FullInfo.txt";
+        string pfileall = "FullInfoAll.txt";
         public string sqltxt;
-
         
+
+
 
         public void Schit (Cours cours)
     {
@@ -49,6 +51,29 @@ namespace Coursess
                 MessageBox.Show(e.Message);
             }
     }
+
+        public void SchitAll(Cours cours)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(pfileall))
+                {
+                    sqltxt = sr.ReadToEnd();
+                    cnn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter(sqltxt, cnn);
+                    SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "Nagruzka");
+                    cours.DataFull.DataSource = ds.Tables[0];
+                    cnn.Close();
+                }
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
 
         public void Prepod (Prepodav prepodav)
         {

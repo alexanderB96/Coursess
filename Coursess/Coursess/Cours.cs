@@ -23,5 +23,19 @@ namespace Coursess
         {
 
         }
+
+        private void SwitchAll_OnValueChange(object sender, EventArgs e)
+        {
+            if (SwitchAll.Value == false)
+            {
+                bunifuCustomLabel2.Text = "Информация по всем открытым курсам";
+                aut.Schit(this);
+            }
+            else if (SwitchAll.Value == true)
+            {
+                aut.SchitAll(this);
+                bunifuCustomLabel2.Text = "Информация по всем курсам";
+            }
+        }
     }
 }

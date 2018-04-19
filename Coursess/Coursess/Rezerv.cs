@@ -22,6 +22,7 @@ namespace Coursess
             dobSpec1.Visible = false;
             dobType1.Visible = false;
             indicatorRez.Visible = false;
+            group1.Visible = false;
 
             // aut.Schit(this);
 
@@ -48,6 +49,7 @@ namespace Coursess
             dobFak1.Visible = false;
             dobSpec1.Visible = false;
             dobType1.Visible = false;
+            group1.Visible = false;
 
         }
 
@@ -59,6 +61,7 @@ namespace Coursess
             dobPredm1.Visible = false;
             dobSpec1.Visible = false;
             dobType1.Visible = false;
+            group1.Visible = false;
         }
 
         private void ButtSpecAct_Click(object sender, EventArgs e)
@@ -69,6 +72,7 @@ namespace Coursess
             dobFak1.Visible = false;
             dobPredm1.Visible = false;
             dobType1.Visible = false;
+            group1.Visible = false;
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -79,6 +83,15 @@ namespace Coursess
             dobSpec1.Visible = false;
             dobFak1.Visible = false;
             dobPredm1.Visible = false;
+            group1.Visible = false;
+        }
+
+        private void ButtGroupAct_Click(object sender, EventArgs e)
+        {
+            Polozrez(sender);
+            group1.Visible = true;
+            DannieCombo dc = new DannieCombo();
+            dc.dannieComboBoxGroups(group1);
         }
     }
 }

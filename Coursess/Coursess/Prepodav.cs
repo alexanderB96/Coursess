@@ -24,5 +24,42 @@ namespace Coursess
         {
 
         }
+
+        private void dobPredFam_MouseClick(object sender, MouseEventArgs e)
+        {
+            dobPredFam.Text = "";
+        }
+
+        private void dobPredName_MouseClick(object sender, MouseEventArgs e)
+        {
+            dobPredName.Text = "";
+        }
+
+        private void dobPredSurN_MouseClick(object sender, MouseEventArgs e)
+        {
+            dobPredSurN.Text = "";
+        }
+
+        private void dobNomerPrep_MouseClick(object sender, MouseEventArgs e)
+        {
+            dobNomerPrep.Text = "";
+        }
+
+        private void dobStazhPrep_MouseClick(object sender, MouseEventArgs e)
+        {
+            dobStazhPrep.Text = "";
+        }
+
+        private void buttDobPred_Click(object sender, EventArgs e)
+        {
+            aut.DobPrepod(this);
+            aut.Prepod(this);
+            dobPredFam.Text = "введите фамилию ...";
+            dobStazhPrep.Text = "стаж ...";
+            dobNomerPrep.Text = "номер телефона ...";
+            dobPredSurN.Text = "введите отчество ...";
+            dobPredName.Text = "введите имя ...";
+            
+        }
     }
 }

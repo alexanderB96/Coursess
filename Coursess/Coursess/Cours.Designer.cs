@@ -33,6 +33,11 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.SwitchAll = new Bunifu.Framework.UI.BunifuiOSSwitch();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ComboNomerGroup = new System.Windows.Forms.ComboBox();
+            this.ComboPredmet = new System.Windows.Forms.ComboBox();
+            this.ComboPrepod = new System.Windows.Forms.ComboBox();
+            this.ComboType = new System.Windows.Forms.ComboBox();
+            this.buttDobCours = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.DataFull)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +49,6 @@
             this.DataFull.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataFull.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataFull.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DataFull.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataFull.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataFull.Location = new System.Drawing.Point(0, 28);
             this.DataFull.Name = "DataFull";
@@ -98,11 +102,89 @@
             this.bunifuCustomLabel2.TabIndex = 3;
             this.bunifuCustomLabel2.Text = "Информация по всем открытым курсам";
             // 
+            // ComboNomerGroup
+            // 
+            this.ComboNomerGroup.FormattingEnabled = true;
+            this.ComboNomerGroup.Location = new System.Drawing.Point(3, 236);
+            this.ComboNomerGroup.Name = "ComboNomerGroup";
+            this.ComboNomerGroup.Size = new System.Drawing.Size(70, 21);
+            this.ComboNomerGroup.TabIndex = 5;
+            this.ComboNomerGroup.TextChanged += new System.EventHandler(this.GetToID_TextChanged);
+            // 
+            // ComboPredmet
+            // 
+            this.ComboPredmet.FormattingEnabled = true;
+            this.ComboPredmet.Location = new System.Drawing.Point(94, 236);
+            this.ComboPredmet.Name = "ComboPredmet";
+            this.ComboPredmet.Size = new System.Drawing.Size(137, 21);
+            this.ComboPredmet.TabIndex = 6;
+            this.ComboPredmet.TextChanged += new System.EventHandler(this.GetToID_TextChanged);
+            this.ComboPredmet.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ComboPredmet_MouseClick);
+            // 
+            // ComboPrepod
+            // 
+            this.ComboPrepod.FormattingEnabled = true;
+            this.ComboPrepod.Location = new System.Drawing.Point(254, 236);
+            this.ComboPrepod.Name = "ComboPrepod";
+            this.ComboPrepod.Size = new System.Drawing.Size(150, 21);
+            this.ComboPrepod.TabIndex = 7;
+            this.ComboPrepod.TextChanged += new System.EventHandler(this.GetToID_TextChanged);
+            // 
+            // ComboType
+            // 
+            this.ComboType.FormattingEnabled = true;
+            this.ComboType.Location = new System.Drawing.Point(427, 236);
+            this.ComboType.Name = "ComboType";
+            this.ComboType.Size = new System.Drawing.Size(112, 21);
+            this.ComboType.TabIndex = 8;
+            this.ComboType.TextChanged += new System.EventHandler(this.GetToID_TextChanged);
+            // 
+            // buttDobCours
+            // 
+            this.buttDobCours.Activecolor = System.Drawing.Color.Transparent;
+            this.buttDobCours.BackColor = System.Drawing.Color.Transparent;
+            this.buttDobCours.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttDobCours.BorderRadius = 0;
+            this.buttDobCours.ButtonText = "Добавить ";
+            this.buttDobCours.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttDobCours.DisabledColor = System.Drawing.Color.Gray;
+            this.buttDobCours.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.buttDobCours.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttDobCours.Iconimage = null;
+            this.buttDobCours.Iconimage_right = null;
+            this.buttDobCours.Iconimage_right_Selected = null;
+            this.buttDobCours.Iconimage_Selected = null;
+            this.buttDobCours.IconMarginLeft = 0;
+            this.buttDobCours.IconMarginRight = 0;
+            this.buttDobCours.IconRightVisible = true;
+            this.buttDobCours.IconRightZoom = 0D;
+            this.buttDobCours.IconVisible = true;
+            this.buttDobCours.IconZoom = 90D;
+            this.buttDobCours.IsTab = false;
+            this.buttDobCours.Location = new System.Drawing.Point(142, 349);
+            this.buttDobCours.Name = "buttDobCours";
+            this.buttDobCours.Normalcolor = System.Drawing.Color.Transparent;
+            this.buttDobCours.OnHovercolor = System.Drawing.Color.Transparent;
+            this.buttDobCours.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.buttDobCours.selected = false;
+            this.buttDobCours.Size = new System.Drawing.Size(248, 48);
+            this.buttDobCours.TabIndex = 11;
+            this.buttDobCours.Text = "Добавить ";
+            this.buttDobCours.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.buttDobCours.Textcolor = System.Drawing.Color.DimGray;
+            this.buttDobCours.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttDobCours.Click += new System.EventHandler(this.buttDobCours_Click);
+            // 
             // Cours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.buttDobCours);
+            this.Controls.Add(this.ComboType);
+            this.Controls.Add(this.ComboPrepod);
+            this.Controls.Add(this.ComboPredmet);
+            this.Controls.Add(this.ComboNomerGroup);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.DataFull);
             this.Name = "Cours";
@@ -120,6 +202,11 @@
         public System.Windows.Forms.DataGridView DataFull;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuiOSSwitch SwitchAll;
+        public System.Windows.Forms.ComboBox ComboNomerGroup;
+        public System.Windows.Forms.ComboBox ComboPredmet;
+        public System.Windows.Forms.ComboBox ComboPrepod;
+        public System.Windows.Forms.ComboBox ComboType;
+        public Bunifu.Framework.UI.BunifuiOSSwitch SwitchAll;
+        public Bunifu.Framework.UI.BunifuFlatButton buttDobCours;
     }
 }

@@ -94,6 +94,25 @@ namespace Coursess
                 MessageBox.Show(e.Message);
             }
         }
+        public void Groups(Group group)
+        {
+            try
+            {
+                cnn.Open();
+                zapros = (" SELECT   Specialnosti.Name_spec AS [Специальность] ,Otdelenie.Name_Otdela AS [Отдел] ,Groups.[Kolischestvo Stydent] AS [Количество студентов] ,Groups.Nomer_Group AS [Номер группы]  ,Groups.[Open]  FROM dbo.Groups INNER JOIN dbo.Specialnosti   ON Groups.Specialnost = Specialnosti.id_Speci INNER JOIN dbo.Otdelenie   ON Groups.Otdelenie = Otdelenie.id_Otdelenia");
+                SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "Groups");
+                group.DataGroup.DataSource = ds.Tables[0];
+                cnn.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
 
         public void Aut(Form1 form) // проверка коннекта
         {
@@ -226,8 +245,22 @@ namespace Coursess
             comand.Parameters.AddWithValue("@Name_Type", Convert.ToString(dobType.dobTypeTxt.Text));
             comand.ExecuteNonQuery();
             cnn.Close();
-
-
         }
+
+        public void DobPrepod(Prepodav prepodav)
+        {
+            cnn.Open();
+            comand = cnn.CreateCommand();
+            comand.CommandText = "INSERT INTO Prepodavateli (Family, Name, Surname, Phone, Stazh) VALUES  (@Family, @Name, @Surname, @Phone, @Stazh)";
+            comand.Parameters.AddWithValue("@Family", Convert.ToString(prepodav.dobPredFam.Text));
+            comand.Parameters.AddWithValue("@Name", Convert.ToString(prepodav.dobPredName.Text));
+            comand.Parameters.AddWithValue("@Surname", Convert.ToString(prepodav.dobPredSurN.Text));
+            comand.Parameters.AddWithValue("@Phone", Convert.ToString(prepodav.dobNomerPrep.Text));
+            comand.Parameters.AddWithValue("@Stazh", Convert.ToString(prepodav.dobStazhPrep.Text));
+            comand.ExecuteNonQuery();
+            cnn.Close();
+        }
+
+        
     }
 }

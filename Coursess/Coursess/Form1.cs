@@ -12,10 +12,17 @@ namespace Coursess
 {
     public partial class Form1 : Form
     {
+        Autorizacia at = new Autorizacia();
+        DannieCombo dc = new DannieCombo();
+        Cours cs = new Cours();
+        
+
+        //Cours cours;
+
         public Form1()
         {
             InitializeComponent();
-            Autorizacia at = new Autorizacia();
+            //Autorizacia at = new Autorizacia();
                 at.Aut(this);
            courses1.Visible = true;
             rezerv1.Visible = false;
@@ -46,9 +53,16 @@ namespace Coursess
             prepodav1.Visible = false;
         }
 
+       
         private void Courses_Click(object sender, EventArgs e)
         {
+            
+            DannieCombo dn = new DannieCombo();
+            
+            //dos.label2_Click(null, null);
+            //dos.SwitchAll.Value = true;
             Poloz(sender);
+            dn.dannieComboBox(cours1);
             courses1.Visible = false;
             rezerv1.Visible = false;
             cours1.Visible = true;

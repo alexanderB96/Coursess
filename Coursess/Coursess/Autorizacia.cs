@@ -99,7 +99,7 @@ namespace Coursess
             try
             {
                 cnn.Open();
-                zapros = (" SELECT   Specialnosti.Name_spec AS [Специальность] ,Otdelenie.Name_Otdela AS [Отдел] ,Groups.[Kolischestvo Stydent] AS [Количество студентов] ,Groups.Nomer_Group AS [Номер группы]  ,Groups.[Open]  FROM dbo.Groups INNER JOIN dbo.Specialnosti   ON Groups.Specialnost = Specialnosti.id_Speci INNER JOIN dbo.Otdelenie   ON Groups.Otdelenie = Otdelenie.id_Otdelenia");
+                zapros = (" SELECT   Specialnosti.Name_spec AS [Специальность] ,Otdelenie.Name_Otdela AS [Отдел] ,Groups.[Kolischestvo_Stydent] AS [Количество студентов] ,Groups.Nomer_Group AS [Номер группы]  ,Groups.[Open1]  FROM dbo.Groups INNER JOIN dbo.Specialnosti   ON Groups.Specialnost = Specialnosti.id_Speci INNER JOIN dbo.Otdelenie   ON Groups.Otdelenie = Otdelenie.id_Otdelenia");
                 SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);
                 DataSet ds = new DataSet();
@@ -137,7 +137,7 @@ namespace Coursess
         {
             
             cnn.Open();
-            zapros = ("SELECT Specialnosti.Name_spec AS Специальность ,Groups.[Kolischestvo Stydent] AS [Количество Студентов] ,Groups.Nomer_Group AS [Номер Группы] ,Otdelenie.Name_Otdela AS Факультет FROM dbo.Groups INNER JOIN dbo.Otdelenie  ON Groups.Otdelenie = Otdelenie.id_Otdelenia INNER JOIN dbo.Specialnosti ON Groups.Specialnost = Specialnosti.id_Speci WHERE Groups.[Open] = 0");
+            zapros = ("SELECT Specialnosti.Name_spec AS Специальность ,Groups.[Kolischestvo_Stydent] AS [Количество Студентов] ,Groups.Nomer_Group AS [Номер Группы] ,Otdelenie.Name_Otdela AS Факультет FROM dbo.Groups INNER JOIN dbo.Otdelenie  ON Groups.Otdelenie = Otdelenie.id_Otdelenia INNER JOIN dbo.Specialnosti ON Groups.Specialnost = Specialnosti.id_Speci WHERE Groups.[Open1] = 1");
             SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
 
@@ -261,6 +261,34 @@ namespace Coursess
             cnn.Close();
         }
 
+        public void DobGroup(Group group)
+        {
+           try
+            {
+                cnn.Open();
+                comand = cnn.CreateCommand();
+                comand.CommandText = "INSERT INTO Groups (Specialnost, Otdelenie, Kolischestvo_Stydent, Nomer_Group, Open1) VALUES  (@Specialnost, @Otdelenie, @Kolischestvo_Stydent, @Nomer_Group, @Open1)";
+                comand.Parameters.AddWithValue("@Specialnost", Convert.ToInt32(group.ComboSpec.SelectedValue));
+                comand.Parameters.AddWithValue("@Otdelenie", Convert.ToInt32(group.ComboOtdel.SelectedValue));
+                comand.Parameters.AddWithValue("@Kolischestvo_Stydent", Convert.ToInt32(group.dobKolVoStuden.Text));
+                comand.Parameters.AddWithValue("@Nomer_Group", Convert.ToInt32(group.dobNomerGroup.Text));
+                comand.Parameters.AddWithValue("@Open1", Convert.ToString(group.opn));
+                comand.ExecuteNonQuery();
+                cnn.Close();
+             }
+             catch (Exception exx)
+             {
+                 MessageBox.Show(exx.ToString());
+             }
+
+             finally
+             {
+                 if (cnn != null)
+                     cnn.Close();
+             }
+
+            Groups(group);
+        }
         
     }
 }

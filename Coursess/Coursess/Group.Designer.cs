@@ -36,6 +36,7 @@
             this.dobNomerGroup = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.dobKolVoStuden = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.buttDobPred = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbid = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DataGroup)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +102,7 @@
             this.dobNomerGroup.TabIndex = 17;
             this.dobNomerGroup.Text = "номер группы ...";
             this.dobNomerGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dobNomerGroup.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dobNomerGroup_MouseClick);
             // 
             // dobKolVoStuden
             // 
@@ -111,6 +113,7 @@
             this.dobKolVoStuden.TabIndex = 16;
             this.dobKolVoStuden.Text = "кол-во студентов ...";
             this.dobKolVoStuden.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dobKolVoStuden.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dobKolVoStuden_MouseClick);
             // 
             // buttDobPred
             // 
@@ -118,7 +121,7 @@
             this.buttDobPred.BackColor = System.Drawing.Color.Transparent;
             this.buttDobPred.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttDobPred.BorderRadius = 0;
-            this.buttDobPred.ButtonText = "Добавить преподавателя";
+            this.buttDobPred.ButtonText = "Добавить группу";
             this.buttDobPred.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttDobPred.DisabledColor = System.Drawing.Color.Gray;
             this.buttDobPred.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -142,16 +145,28 @@
             this.buttDobPred.selected = false;
             this.buttDobPred.Size = new System.Drawing.Size(248, 48);
             this.buttDobPred.TabIndex = 15;
-            this.buttDobPred.Text = "Добавить преподавателя";
+            this.buttDobPred.Text = "Добавить группу";
             this.buttDobPred.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.buttDobPred.Textcolor = System.Drawing.Color.DimGray;
             this.buttDobPred.TextFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttDobPred.Click += new System.EventHandler(this.buttDobPred_Click);
+            // 
+            // lbid
+            // 
+            this.lbid.AutoSize = true;
+            this.lbid.Location = new System.Drawing.Point(514, 294);
+            this.lbid.Name = "lbid";
+            this.lbid.Size = new System.Drawing.Size(13, 13);
+            this.lbid.TabIndex = 18;
+            this.lbid.Text = "1";
+            this.lbid.Visible = false;
             // 
             // Group
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.lbid);
             this.Controls.Add(this.dobNomerGroup);
             this.Controls.Add(this.dobKolVoStuden);
             this.Controls.Add(this.buttDobPred);
@@ -179,5 +194,6 @@
         public WindowsFormsControlLibrary1.BunifuCustomTextbox dobNomerGroup;
         public WindowsFormsControlLibrary1.BunifuCustomTextbox dobKolVoStuden;
         public Bunifu.Framework.UI.BunifuFlatButton buttDobPred;
+        public Bunifu.Framework.UI.BunifuCustomLabel lbid;
     }
 }

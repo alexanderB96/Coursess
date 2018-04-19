@@ -4,7 +4,7 @@
  ,CONCAT(Prepodavateli.Family, ' ' ,Prepodavateli.Name , ' ',Prepodavateli.Surname  ) AS [Преподаватель]
  ,TypeZanaytia.Name_Type AS [Тип занятия]
  ,Predmet.Name_Predmeta AS [Название предмета]
- ,Groups.[Kolischestvo Stydent] AS [Количество студентов]
+ ,Groups.[Kolischestvo_Stydent] AS [Количество студентов]
  ,Specialnosti.Name_spec AS [Название специальности]
  ,Otdelenie.Name_Otdela AS [Название факультета]
 FROM dbo.Nagruzka
@@ -20,4 +20,4 @@ INNER JOIN dbo.Specialnosti
   ON Groups.Specialnost = Specialnosti.id_Speci
 INNER JOIN dbo.TypeZanaytia
   ON Nagruzka.id_Type_zan = TypeZanaytia.id_type
-WHERE Groups.[Open] = 0
+WHERE Groups.[Open1] = 0

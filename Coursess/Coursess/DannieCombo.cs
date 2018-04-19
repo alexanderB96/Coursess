@@ -210,10 +210,12 @@ namespace Coursess
         {
             group.ComboOtdel.DataSource = GetOtdelenei();
             group.ComboOtdel.DisplayMember = "Name_Otdela";
+            group.ComboOtdel.ValueMember = "id_Otdelenia";
 
             group.ComboSpec.DataSource = GetSpecial();
             group.ComboSpec.DisplayMember = "Name_spec";
-            
+            group.ComboSpec.ValueMember = "id_Speci";
+
 
         }
 

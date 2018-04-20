@@ -41,12 +41,12 @@ namespace Coursess
             if (CheckOpen.Checked == false)
             {
                 opn = Convert.ToString(0);
-                lbid.Text = opn;
+                
             }
             else
             {
                 opn = Convert.ToString(1);
-                lbid.Text = opn;
+                
             }
 
         }
@@ -69,9 +69,9 @@ namespace Coursess
         private void DataGroup_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             id = Convert.ToString(DataGroup.SelectedCells[0].Value);
-            lbid.Visible = true;
+            
             //lbid.Text = "yuyuyuyuyuyuyuyuyuyuyu";
-            lbid.Text = id;
+           
             bunifuFlatButton1.Visible = true;
             bunifuFlatButton2.Visible = true;
         }

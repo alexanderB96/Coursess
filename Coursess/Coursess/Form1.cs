@@ -47,6 +47,7 @@ namespace Coursess
         private void Home_Click(object sender, EventArgs e)
         {
             Poloz(sender);
+            at.danniy(courses1);
             courses1.Visible = true;
             rezerv1.Visible = false;
             cours1.Visible = false;

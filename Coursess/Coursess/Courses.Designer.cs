@@ -54,6 +54,7 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(565, 400);
             this.bunifuGradientPanel2.TabIndex = 2;
+            this.bunifuGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel2_Paint);
             // 
             // bunifuGradientPanel1
             // 

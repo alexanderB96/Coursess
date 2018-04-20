@@ -19,5 +19,10 @@ namespace Coursess
             Autorizacia dn = new Autorizacia();
             dn.danniy(this);
         }
+
+        private void bunifuGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -99,7 +99,7 @@ namespace Coursess
             try
             {
                 cnn.Open();
-                zapros = (" SELECT   Specialnosti.Name_spec AS [Специальность] ,Otdelenie.Name_Otdela AS [Отдел] ,Groups.[Kolischestvo_Stydent] AS [Количество студентов] ,Groups.Nomer_Group AS [Номер группы]  ,Groups.[Open1]  FROM dbo.Groups INNER JOIN dbo.Specialnosti   ON Groups.Specialnost = Specialnosti.id_Speci INNER JOIN dbo.Otdelenie   ON Groups.Otdelenie = Otdelenie.id_Otdelenia");
+                zapros = (" SELECT  [id_nom_group] AS ID,  Specialnosti.Name_spec AS [Специальность] ,Otdelenie.Name_Otdela AS [Отдел] ,Groups.[Kolischestvo_Stydent] AS [Количество студентов] ,Groups.Nomer_Group AS [Номер группы]  ,Groups.[Open1]  FROM dbo.Groups INNER JOIN dbo.Specialnosti   ON Groups.Specialnost = Specialnosti.id_Speci INNER JOIN dbo.Otdelenie   ON Groups.Otdelenie = Otdelenie.id_Otdelenia");
                 SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);
                 DataSet ds = new DataSet();
@@ -289,6 +289,82 @@ namespace Coursess
 
             Groups(group);
         }
-        
+
+        public void DeleteGroups(Group group)
+        {
+            DialogResult result = MessageBox.Show("Для удаления записи следует выбрать поле из колонки <ID>", "Информирование", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    cnn.Open();
+                    zapros = ("DELETE FROM [Groups] WHERE  id_nom_group = '" + group.id + "'");
+                    SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+                    SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "Groups");
+                    cnn.Close();
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+                finally
+                {
+                    if (cnn != null)
+                        cnn.Close();
+                }
+
+                
+            }
+            if (result == DialogResult.Cancel)
+            {
+                group.id = null;
+            }
+
+            Groups(group);
+            group.bunifuFlatButton1.Visible = false;
+        }
+
+        public void UpdateGroups(Group group)
+        {
+            DialogResult result = MessageBox.Show("Для обновления статуса группы следует выбрать поле из колонки <ID> . Не забудьте отметить галочкой нужный вариант!", "Информирование", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    cnn.Open();
+                    zapros = ("UPDATE dbo.Groups SET Open1 = '" + group.opn + "' WHERE id_nom_group = '" + group.id + "'");
+                    SqlDataAdapter da = new SqlDataAdapter(zapros, cnn);
+                    SqlCommandBuilder cb = new SqlCommandBuilder(da);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "Groups");
+                    cnn.Close();
+
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+                finally
+                {
+                    if (cnn != null)
+                        cnn.Close();
+                }
+
+
+            }
+            if (result == DialogResult.Cancel)
+            {
+                group.id = null;
+            }
+
+            Groups(group);
+            group.bunifuFlatButton1.Visible = false;
+            group.bunifuFlatButton2.Visible = false;
+        }
     }
 }

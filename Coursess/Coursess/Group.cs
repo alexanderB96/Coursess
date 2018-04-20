@@ -14,12 +14,17 @@ namespace Coursess
     {
         Autorizacia aut = new Autorizacia();
         public string opn = Convert.ToString(1);  //изначально группа создаётся сразу открытой
-        
+        public string id = null;
+
         public Group()
         {
             InitializeComponent();
             aut.Groups(this);
-            
+
+            bunifuFlatButton1.Visible = false;
+            bunifuFlatButton2.Visible = false;
+
+
 
         }
 
@@ -59,6 +64,26 @@ namespace Coursess
         private void buttDobPred_Click(object sender, EventArgs e)
         {
             aut.DobGroup(this);
+        }
+
+        private void DataGroup_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = Convert.ToString(DataGroup.SelectedCells[0].Value);
+            lbid.Visible = true;
+            //lbid.Text = "yuyuyuyuyuyuyuyuyuyuyu";
+            lbid.Text = id;
+            bunifuFlatButton1.Visible = true;
+            bunifuFlatButton2.Visible = true;
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            aut.DeleteGroups(this);
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            aut.UpdateGroups(this);
         }
     }
 }

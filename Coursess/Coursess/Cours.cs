@@ -65,10 +65,7 @@ namespace Coursess
 
         private void ComboPredmet_TextChanged(object sender, EventArgs e)
         {
-            //txtpredm = Convert.ToString(ComboPredmet.Text);
-            //txtgrup = Convert.ToString(ComboNomerGroup.Text);
-            txtprep = Convert.ToString(ComboPrepod.Text);
-            txttype = Convert.ToString(ComboType.Text);
+           
             aut.cnn.Open();
             aut.comand = aut.cnn.CreateCommand();
             aut.comand.CommandText = ("SELECT id_Predmeta FROM Courses.dbo.Predmet WHERE Name_Predmeta = '" + ComboPredmet.Text + "' ");
@@ -82,6 +79,7 @@ namespace Coursess
 
             }
             aut.cnn.Close();
+
             
         }
 
@@ -109,11 +107,13 @@ namespace Coursess
             {
                 aut.cnn.Open();
                 aut.comand = aut.cnn.CreateCommand();
-                aut.comand.CommandText = "INSERT INTO Nagruzka (Nomer_group, id_Predmet, id_Type_zan,kod_Prepodavatelya) VALUES  (@Nomer_group, @id_Predmet, @id_Type_zan, @kod_Prepodavatelya)";
+                aut.comand.CommandText = "INSERT INTO Nagruzka (Nomer_group, id_Predmet, id_Type_zan,kod_Prepodavatelya, Kolischestvo_chasov) VALUES  (@Nomer_group, @id_Predmet, @id_Type_zan, @kod_Prepodavatelya, @Kolischestvo_chasov)";
                 aut.comand.Parameters.AddWithValue("@Nomer_group", txtgrup);
                 aut.comand.Parameters.AddWithValue("@id_Predmet", txtpredm);
                 aut.comand.Parameters.AddWithValue("@id_Type_zan", txttype);
                 aut.comand.Parameters.AddWithValue("@kod_Prepodavatelya", txtprep);
+                aut.comand.Parameters.AddWithValue("@Kolischestvo_chasov", Convert.ToString(kolChasov.Text));
+
                 aut.comand.ExecuteNonQuery();
                 aut.cnn.Close();
             }
@@ -122,7 +122,14 @@ namespace Coursess
                 MessageBox.Show(ex.ToString());
             }
 
+            aut.Schit(this);
+            dc.dannieComboBox(this);
 
+        }
+
+        private void kolChasov_MouseClick(object sender, MouseEventArgs e)
+        {
+            kolChasov.Text = "";
         }
     }
 }

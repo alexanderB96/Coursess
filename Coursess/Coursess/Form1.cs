@@ -16,20 +16,15 @@ namespace Coursess
         DannieCombo dc = new DannieCombo();
         Cours cs = new Cours();
         
-
-        //Cours cours;
-
         public Form1()
         {
             InitializeComponent();
-            //Autorizacia at = new Autorizacia();
-                at.Aut(this);
-           courses1.Visible = true;
+            at.Aut(this);
+            courses1.Visible = true;
             rezerv1.Visible = false;
             cours1.Visible = false;
             prepodav1.Visible = false;
             
-            // Home_Click(null, null);
         }
 
         void Poloz(object sender) //положение индикатора
@@ -59,11 +54,9 @@ namespace Coursess
         {
             
             DannieCombo dn = new DannieCombo();
-            
-            //dos.label2_Click(null, null);
-            //dos.SwitchAll.Value = true;
             Poloz(sender);
             dn.dannieComboBox(cours1);
+            at.Schit(cours1);
             courses1.Visible = false;
             rezerv1.Visible = false;
             cours1.Visible = true;
@@ -74,7 +67,6 @@ namespace Coursess
         private void Prepod_Click(object sender, EventArgs e)
         {
             Poloz(sender);
-           
             courses1.Visible = false;
             rezerv1.Visible = false;
             cours1.Visible = false;
@@ -86,20 +78,12 @@ namespace Coursess
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             Poloz(sender);
-            // rezerv1.Refresh(); // не работает
-          //  UserControl rezerv1 = new UserControl();
-            rezerv1.Visible = true;
+             rezerv1.Visible = true;
             courses1.Visible = false;
             cours1.Visible = false;
             prepodav1.Visible = false;
-
-
-
         }
 
-        /* private void bunifuFlatButton1_Click(object sender, EventArgs e)
-         {
-
-         }*/
+        
     }
 }

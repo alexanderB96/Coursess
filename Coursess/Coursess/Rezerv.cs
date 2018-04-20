@@ -24,8 +24,6 @@ namespace Coursess
             indicatorRez.Visible = false;
             group1.Visible = false;
 
-            // aut.Schit(this);
-
         }
 
         void Polozrez(object sender) //положение индикатора
@@ -92,6 +90,11 @@ namespace Coursess
             group1.Visible = true;
             DannieCombo dc = new DannieCombo();
             dc.dannieComboBoxGroups(group1);
+        }
+
+        private void Rezerv_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -47,13 +47,13 @@
             this.DataType.Name = "DataType";
             this.DataType.ReadOnly = true;
             this.DataType.RowHeadersVisible = false;
-            this.DataType.Size = new System.Drawing.Size(565, 202);
+            this.DataType.Size = new System.Drawing.Size(565, 272);
             this.DataType.TabIndex = 6;
             // 
             // dobTypeTxt
             // 
             this.dobTypeTxt.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobTypeTxt.Location = new System.Drawing.Point(12, 273);
+            this.dobTypeTxt.Location = new System.Drawing.Point(12, 278);
             this.dobTypeTxt.Name = "dobTypeTxt";
             this.dobTypeTxt.Size = new System.Drawing.Size(191, 20);
             this.dobTypeTxt.TabIndex = 12;
@@ -83,7 +83,7 @@
             this.buttDobType.IconVisible = true;
             this.buttDobType.IconZoom = 90D;
             this.buttDobType.IsTab = false;
-            this.buttDobType.Location = new System.Drawing.Point(306, 249);
+            this.buttDobType.Location = new System.Drawing.Point(306, 261);
             this.buttDobType.Name = "buttDobType";
             this.buttDobType.Normalcolor = System.Drawing.Color.Transparent;
             this.buttDobType.OnHovercolor = System.Drawing.Color.Transparent;

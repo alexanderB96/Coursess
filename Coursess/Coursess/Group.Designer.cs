@@ -48,6 +48,7 @@
             this.DataGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGroup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGroup.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DataGroup.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGroup.Location = new System.Drawing.Point(0, 0);
             this.DataGroup.Name = "DataGroup";

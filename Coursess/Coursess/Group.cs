@@ -69,9 +69,7 @@ namespace Coursess
         private void DataGroup_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             id = Convert.ToString(DataGroup.SelectedCells[0].Value);
-            
-            //lbid.Text = "yuyuyuyuyuyuyuyuyuyuyu";
-           
+                     
             bunifuFlatButton1.Visible = true;
             bunifuFlatButton2.Visible = true;
         }

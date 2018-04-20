@@ -95,11 +95,11 @@
             this.DataCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.DataCourses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DataCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataCourses.Location = new System.Drawing.Point(0, 28);
+            this.DataCourses.Location = new System.Drawing.Point(0, 32);
             this.DataCourses.Name = "DataCourses";
             this.DataCourses.ReadOnly = true;
             this.DataCourses.RowHeadersVisible = false;
-            this.DataCourses.Size = new System.Drawing.Size(565, 150);
+            this.DataCourses.Size = new System.Drawing.Size(565, 365);
             this.DataCourses.TabIndex = 0;
             // 
             // Courses

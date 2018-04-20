@@ -47,13 +47,13 @@
             this.DataPredmet.Name = "DataPredmet";
             this.DataPredmet.ReadOnly = true;
             this.DataPredmet.RowHeadersVisible = false;
-            this.DataPredmet.Size = new System.Drawing.Size(559, 213);
+            this.DataPredmet.Size = new System.Drawing.Size(559, 235);
             this.DataPredmet.TabIndex = 1;
             // 
             // dobPricePred
             // 
             this.dobPricePred.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobPricePred.Location = new System.Drawing.Point(371, 222);
+            this.dobPricePred.Location = new System.Drawing.Point(300, 244);
             this.dobPricePred.Name = "dobPricePred";
             this.dobPricePred.Size = new System.Drawing.Size(191, 20);
             this.dobPricePred.TabIndex = 9;
@@ -64,7 +64,7 @@
             // dobNamePred
             // 
             this.dobNamePred.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobNamePred.Location = new System.Drawing.Point(3, 222);
+            this.dobNamePred.Location = new System.Drawing.Point(73, 244);
             this.dobNamePred.Name = "dobNamePred";
             this.dobNamePred.Size = new System.Drawing.Size(191, 20);
             this.dobNamePred.TabIndex = 8;
@@ -94,7 +94,7 @@
             this.buttDobPred.IconVisible = true;
             this.buttDobPred.IconZoom = 90D;
             this.buttDobPred.IsTab = false;
-            this.buttDobPred.Location = new System.Drawing.Point(183, 248);
+            this.buttDobPred.Location = new System.Drawing.Point(184, 259);
             this.buttDobPred.Name = "buttDobPred";
             this.buttDobPred.Normalcolor = System.Drawing.Color.Transparent;
             this.buttDobPred.OnHovercolor = System.Drawing.Color.Transparent;

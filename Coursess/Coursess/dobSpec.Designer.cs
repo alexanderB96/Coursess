@@ -47,13 +47,13 @@
             this.DataSpec.Name = "DataSpec";
             this.DataSpec.ReadOnly = true;
             this.DataSpec.RowHeadersVisible = false;
-            this.DataSpec.Size = new System.Drawing.Size(565, 202);
+            this.DataSpec.Size = new System.Drawing.Size(565, 255);
             this.DataSpec.TabIndex = 5;
             // 
             // dobSpecialnost
             // 
             this.dobSpecialnost.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobSpecialnost.Location = new System.Drawing.Point(3, 251);
+            this.dobSpecialnost.Location = new System.Drawing.Point(3, 277);
             this.dobSpecialnost.Name = "dobSpecialnost";
             this.dobSpecialnost.Size = new System.Drawing.Size(191, 20);
             this.dobSpecialnost.TabIndex = 10;
@@ -83,7 +83,7 @@
             this.buttDobPred.IconVisible = true;
             this.buttDobPred.IconZoom = 90D;
             this.buttDobPred.IsTab = false;
-            this.buttDobPred.Location = new System.Drawing.Point(297, 227);
+            this.buttDobPred.Location = new System.Drawing.Point(297, 261);
             this.buttDobPred.Name = "buttDobPred";
             this.buttDobPred.Normalcolor = System.Drawing.Color.Transparent;
             this.buttDobPred.OnHovercolor = System.Drawing.Color.Transparent;

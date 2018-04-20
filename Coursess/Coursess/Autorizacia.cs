@@ -271,7 +271,7 @@ namespace Coursess
                 comand.Parameters.AddWithValue("@Specialnost", Convert.ToInt32(group.ComboSpec.SelectedValue));
                 comand.Parameters.AddWithValue("@Otdelenie", Convert.ToInt32(group.ComboOtdel.SelectedValue));
                 comand.Parameters.AddWithValue("@Kolischestvo_Stydent", Convert.ToInt32(group.dobKolVoStuden.Text));
-                comand.Parameters.AddWithValue("@Nomer_Group", Convert.ToInt32(group.dobNomerGroup.Text));
+                comand.Parameters.AddWithValue("@Nomer_Group", Convert.ToString(group.dobNomerGroup.Text));
                 comand.Parameters.AddWithValue("@Open1", Convert.ToString(group.opn));
                 comand.ExecuteNonQuery();
                 cnn.Close();

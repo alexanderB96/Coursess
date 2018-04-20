@@ -294,6 +294,7 @@
             this.Controls.Add(this.dobPredm1);
             this.Name = "Rezerv";
             this.Size = new System.Drawing.Size(565, 400);
+            this.Load += new System.EventHandler(this.Rezerv_Load);
             ((System.ComponentModel.ISupportInitialize)(this.indicatorRez)).EndInit();
             this.ResumeLayout(false);
 

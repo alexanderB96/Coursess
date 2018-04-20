@@ -40,6 +40,7 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.prepodav1 = new Coursess.Prepodav();
             this.cours1 = new Coursess.Cours();
             this.rezerv1 = new Coursess.Rezerv();
@@ -96,7 +97,7 @@
             // ident
             // 
             this.ident.BackColor = System.Drawing.Color.Magenta;
-            this.ident.Location = new System.Drawing.Point(0, 397);
+            this.ident.Location = new System.Drawing.Point(201, 6);
             this.ident.Name = "ident";
             this.ident.Size = new System.Drawing.Size(5, 3);
             this.ident.TabIndex = 5;
@@ -298,6 +299,16 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("SuperFrench", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(1, 439);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(78, 9);
+            this.bunifuCustomLabel2.TabIndex = 4;
+            this.bunifuCustomLabel2.Text = "power by alexander.b";
+            // 
             // prepodav1
             // 
             this.prepodav1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -339,6 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 448);
+            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
@@ -354,6 +366,7 @@
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -374,6 +387,7 @@
         private Rezerv rezerv1;
         private Cours cours1;
         private Prepodav prepodav1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
     }
 }
 

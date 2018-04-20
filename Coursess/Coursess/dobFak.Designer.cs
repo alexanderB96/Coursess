@@ -37,7 +37,7 @@
             // dobSpecialnosti
             // 
             this.dobSpecialnosti.BorderColor = System.Drawing.Color.SeaGreen;
-            this.dobSpecialnosti.Location = new System.Drawing.Point(3, 226);
+            this.dobSpecialnosti.Location = new System.Drawing.Point(0, 277);
             this.dobSpecialnosti.Name = "dobSpecialnosti";
             this.dobSpecialnosti.Size = new System.Drawing.Size(191, 20);
             this.dobSpecialnosti.TabIndex = 6;
@@ -67,7 +67,7 @@
             this.ButtDobFak.IconVisible = true;
             this.ButtDobFak.IconZoom = 90D;
             this.ButtDobFak.IsTab = false;
-            this.ButtDobFak.Location = new System.Drawing.Point(355, 208);
+            this.ButtDobFak.Location = new System.Drawing.Point(354, 261);
             this.ButtDobFak.Name = "ButtDobFak";
             this.ButtDobFak.Normalcolor = System.Drawing.Color.Transparent;
             this.ButtDobFak.OnHovercolor = System.Drawing.Color.Transparent;
@@ -94,7 +94,7 @@
             this.DataOtdelenie.Name = "DataOtdelenie";
             this.DataOtdelenie.ReadOnly = true;
             this.DataOtdelenie.RowHeadersVisible = false;
-            this.DataOtdelenie.Size = new System.Drawing.Size(565, 202);
+            this.DataOtdelenie.Size = new System.Drawing.Size(565, 265);
             this.DataOtdelenie.TabIndex = 4;
             // 
             // dobFak

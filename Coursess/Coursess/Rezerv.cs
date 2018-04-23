@@ -13,16 +13,16 @@ namespace Coursess
     public partial class Rezerv : UserControl
     {
         Autorizacia aut = new Autorizacia();
-        public Rezerv()
+        public Rezerv() //вкладка Добавления
         {
             InitializeComponent();
 
-            dobPredm1.Visible = false;
-            dobFak1.Visible = false;
-            dobSpec1.Visible = false;
-            dobType1.Visible = false;
-            indicatorRez.Visible = false;
-            group1.Visible = false;
+            dobPredm1.Visible = false; //предметы
+            dobFak1.Visible = false; //отделения
+            dobSpec1.Visible = false; //специальности
+            dobType1.Visible = false; //тип
+            indicatorRez.Visible = false; //индикатор выбранной вкладки
+            group1.Visible = false; // группы
 
         }
 
@@ -42,7 +42,7 @@ namespace Coursess
         private void ButtPredmAct_Click(object sender, EventArgs e)
         {
            Polozrez(sender);
-            aut.rezerv1(dobPredm1);
+            aut.rezerv1(dobPredm1); //вывод в датагрид
             dobPredm1.Visible = true;
             dobFak1.Visible = false;
             dobSpec1.Visible = false;
@@ -54,7 +54,7 @@ namespace Coursess
         private void ButtFakAct_Click(object sender, EventArgs e)
         {
             Polozrez(sender);
-            aut.rezerv0(dobFak1);
+            aut.rezerv0(dobFak1); //вывод в датагрид
             dobFak1.Visible = true;
             dobPredm1.Visible = false;
             dobSpec1.Visible = false;
@@ -65,7 +65,7 @@ namespace Coursess
         private void ButtSpecAct_Click(object sender, EventArgs e)
         {
         Polozrez(sender);
-            aut.visSpec(dobSpec1);
+            aut.visSpec(dobSpec1); //вывод в датагрид
             dobSpec1.Visible = true;
             dobFak1.Visible = false;
             dobPredm1.Visible = false;
@@ -76,7 +76,7 @@ namespace Coursess
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             Polozrez(sender);
-            aut.TipZan(dobType1);
+            aut.TipZan(dobType1); //вывод в датагрид
             dobType1.Visible = true;
             dobSpec1.Visible = false;
             dobFak1.Visible = false;

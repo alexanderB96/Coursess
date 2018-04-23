@@ -25,6 +25,10 @@ namespace Coursess
 
         }
 
+        //начало
+
+            // хрен знает как повесить один обработчик на очищение (возможно по тегу можно)
+            // костыль
         private void dobPredFam_MouseClick(object sender, MouseEventArgs e)
         {
             dobPredFam.Text = "";
@@ -49,6 +53,8 @@ namespace Coursess
         {
             dobStazhPrep.Text = "";
         }
+
+        //конец
 
         private void buttDobPred_Click(object sender, EventArgs e)
         {

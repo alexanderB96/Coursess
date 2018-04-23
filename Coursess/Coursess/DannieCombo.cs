@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Coursess
 {
+    //класс заполнения имеющихся комбобоксов в программе
     class DannieCombo
     {
          Autorizacia aut = new Autorizacia();
 
-        public DataTable GetGrops()
+        public DataTable GetGrops() //загружает таблицу группы
         {
             DataTable table = new DataTable();
             string query = ("SELECT * FROM Courses.dbo.Groups");
@@ -42,7 +43,7 @@ namespace Coursess
             return table;
         }
 
-        public DataTable GetPredmet()
+        public DataTable GetPredmet() //загружает таблицу предметы
         {
             DataTable table = new DataTable();
             string query = ("SELECT * FROM Courses.dbo.Predmet");
@@ -70,7 +71,7 @@ namespace Coursess
 
         }
 
-        public DataTable GetPrepod()
+        public DataTable GetPrepod() // загружает таблицу преподавателей
         {
             DataTable table = new DataTable();
             string query = ("SELECT *, CONCAT(Family, ' ', Name, ' ', Surname) AS FIO FROM Courses.dbo.Prepodavateli ");
@@ -99,7 +100,7 @@ namespace Coursess
 
         }
 
-        public DataTable GetTypeZan()
+        public DataTable GetTypeZan() // загружает таблицу с типом занятий
         {
             DataTable table = new DataTable();
             string query = ("SELECT*  FROM Courses.dbo.TypeZanaytia");
@@ -128,14 +129,14 @@ namespace Coursess
 
         }
 
-        public void dannieComboBox(Cours cours)
+        public void dannieComboBox(Cours cours) //отвечает за заполнение комбобоксов
         {
             cours.ComboNomerGroup.DataSource = GetGrops();
-            cours.ComboNomerGroup.DisplayMember = "Nomer_Group";
-            cours.ComboNomerGroup.ValueMember = "id_nom_group";
+            cours.ComboNomerGroup.DisplayMember = "Nomer_Group"; //отображаем столбец
+            cours.ComboNomerGroup.ValueMember = "id_nom_group"; //тут обрабатываем ID выбранной строки. т.е. берем ид выбранной группы
 
             cours.ComboPredmet.DataSource = GetPredmet();
-            cours.ComboPredmet.DisplayMember = "Name_Predmeta";
+            cours.ComboPredmet.DisplayMember = "Name_Predmeta"; // всё что ниже аналогично
             cours.ComboPredmet.ValueMember = "id_Predmeta";
 
             cours.ComboPrepod.DataSource = GetPrepod();
@@ -148,7 +149,7 @@ namespace Coursess
         
         }
 
-        public DataTable GetSpecial()
+        public DataTable GetSpecial() //хагружаем таблицу специальностей
         {
             DataTable table = new DataTable();
             string query = ("SELECT * FROM Courses.dbo.Specialnosti");
@@ -177,7 +178,7 @@ namespace Coursess
 
         }
 
-        public DataTable GetOtdelenei()
+        public DataTable GetOtdelenei() //загружаем факультеты
         {
             DataTable table = new DataTable();
             string query = ("SELECT * FROM Courses.dbo.Otdelenie");
@@ -209,7 +210,7 @@ namespace Coursess
         public void dannieComboBoxGroups(Group group)
         {
             group.ComboOtdel.DataSource = GetOtdelenei();
-            group.ComboOtdel.DisplayMember = "Name_Otdela";
+            group.ComboOtdel.DisplayMember = "Name_Otdela"; //собственно тот же принцип что и выше
             group.ComboOtdel.ValueMember = "id_Otdelenia";
 
             group.ComboSpec.DataSource = GetSpecial();

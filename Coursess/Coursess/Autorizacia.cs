@@ -22,14 +22,16 @@ namespace Coursess
         public SqlConnection cnn = new SqlConnection(@"Data Source=АЛЕКСАНДР-ПК; Initial Catalog = Courses; Integrated Security=SSPI;");
         public SqlCommand comand;
         public string zapros;
+        //н * sql-запрос в файле
         string pfile = "FullInfo.txt";
         string pfileall = "FullInfoAll.txt";
+        // к*
         public string sqltxt;
         
 
 
 
-        public void Schit (Cours cours)
+        public void Schit (Cours cours) //загрузка таблицы с открытми курсами (ИНФА ПО КУРСАМ)
     {
             try
             {
@@ -52,11 +54,11 @@ namespace Coursess
             }
     }
 
-        public void SchitAll(Cours cours)
+        public void SchitAll(Cours cours) //загрузка таблицы со всеми курсами (ИНФА ПО КУРСАМ)
         {
             try
             {
-                using (StreamReader sr = new StreamReader(pfileall))
+                using (StreamReader sr = new StreamReader(pfileall)) 
                 {
                     sqltxt = sr.ReadToEnd();
                     cnn.Open();
@@ -75,7 +77,7 @@ namespace Coursess
             }
         }
 
-        public void Prepod (Prepodav prepodav)
+        public void Prepod (Prepodav prepodav) //загрузка табл преподавателей
         {
             try
             {
@@ -94,7 +96,7 @@ namespace Coursess
                 MessageBox.Show(e.Message);
             }
         }
-        public void Groups(Group group)
+        public void Groups(Group group) //табл группы
         {
             try
             {
@@ -120,7 +122,7 @@ namespace Coursess
             try
             {
                 cnn.Open();
-                str = "Удачно!";
+                str = "Удачно!"; //зачем стр тут? ХЗ. Пусть будет
                 form.ident.BackColor = Color.Transparent; 
                 cnn.Close();
             }
@@ -147,7 +149,7 @@ namespace Coursess
             cnn.Close();
         }
 
-        public void rezerv0(dobFak dobFak)
+        public void rezerv0(dobFak dobFak) // загрузка факультетов
         {
 
             cnn.Open();
@@ -161,7 +163,7 @@ namespace Coursess
 
         }
 
-        public void rezerv1(dobPredm dobPredm)
+        public void rezerv1(dobPredm dobPredm) // выгрузка таблица Предмет 
         {
             cnn.Open();
             zapros = (" SELECT Name_Predmeta AS [Предмет], Price AS [Цена] FROM Courses.dbo.Predmet");
@@ -173,7 +175,7 @@ namespace Coursess
             cnn.Close();
         }
 
-        public void dobFakyltet(dobFak dobFak)
+        public void dobFakyltet(dobFak dobFak) //добавление факультета
         {
             cnn.Open();
             comand = cnn.CreateCommand();
@@ -185,7 +187,7 @@ namespace Coursess
            
         }
 
-        public void dobPred(dobPredm dobPredm)
+        public void dobPred(dobPredm dobPredm) //добавление препода
         {
             cnn.Open();
             comand = cnn.CreateCommand();
@@ -198,7 +200,7 @@ namespace Coursess
 
         }
 
-        public void visSpec(dobSpec dobSpec)
+        public void visSpec(dobSpec dobSpec) // загрузка специальности
         {
 
             cnn.Open();
@@ -212,7 +214,7 @@ namespace Coursess
 
         }
 
-        public void dobSpecial(dobSpec dobSpec)
+        public void dobSpecial(dobSpec dobSpec) //добавление специальности
         {
             cnn.Open();
             comand = cnn.CreateCommand();
@@ -223,7 +225,7 @@ namespace Coursess
 
 
         }
-        public void TipZan(dobType dobType)
+        public void TipZan(dobType dobType) //выгрузка типа занятий
         {
 
             cnn.Open();
@@ -237,7 +239,7 @@ namespace Coursess
 
         }
 
-        public void dobTipZan(dobType dobType)
+        public void dobTipZan(dobType dobType) //добавление занятий
         {
             cnn.Open();
             comand = cnn.CreateCommand();
@@ -247,7 +249,7 @@ namespace Coursess
             cnn.Close();
         }
 
-        public void DobPrepod(Prepodav prepodav)
+        public void DobPrepod(Prepodav prepodav) //добавление преподавателей
         {
             cnn.Open();
             comand = cnn.CreateCommand();
@@ -261,7 +263,7 @@ namespace Coursess
             cnn.Close();
         }
 
-        public void DobGroup(Group group)
+        public void DobGroup(Group group) //добавление групп
         {
            try
             {
@@ -290,7 +292,7 @@ namespace Coursess
             Groups(group);
         }
 
-        public void DeleteGroups(Group group)
+        public void DeleteGroups(Group group) //класс удаления группы. в базе выбран режим связи "КАСКАд" для удаления связанных записей
         {
             DialogResult result = MessageBox.Show("Для удаления записи следует выбрать поле из колонки <ID>", "Информирование", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
@@ -328,7 +330,7 @@ namespace Coursess
             group.bunifuFlatButton1.Visible = false;
         }
 
-        public void UpdateGroups(Group group)
+        public void UpdateGroups(Group group) // класс изминения статуса групы ОТКРЫТА/ЗАКРЫТА
         {
             DialogResult result = MessageBox.Show("Для обновления статуса группы следует выбрать поле из колонки <ID> . Не забудьте отметить галочкой нужный вариант!", "Информирование", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 

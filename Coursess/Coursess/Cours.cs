@@ -35,13 +35,13 @@ namespace Coursess
 
         }
 
-        public void SwitchAll_OnValueChange(object sender, EventArgs e)
+        public void SwitchAll_OnValueChange(object sender, EventArgs e) //свитч (переключатель) который отображает данные в гриде
         {
             dc.dannieComboBox(this);
             if (SwitchAll.Value == false)
             {
                 bunifuCustomLabel2.Text = "Информация по всем открытым курсам";
-                aut.Schit(this);
+                aut.Schit(this); //текст сверху все описывает
 
             }
             else if (SwitchAll.Value == true)
@@ -63,7 +63,7 @@ namespace Coursess
            
         }
 
-        private void ComboPredmet_TextChanged(object sender, EventArgs e)
+        private void ComboPredmet_TextChanged(object sender, EventArgs e) //цепляем ID выбранного предмета (ХЗ НУЖЕН ОН ИЛИ НЕТ, НО ПУСТЬ ВИСИТ, ВОЗМОЖНО КЛАСС НИЖЕ РЕАЛИЗОВАН)
         {
            
             aut.cnn.Open();
@@ -101,7 +101,7 @@ namespace Coursess
 
         
 
-        private void buttDobCours_Click(object sender, EventArgs e)
+        private void buttDobCours_Click(object sender, EventArgs e) //ЗАПРОС НА ДОБАВЛЕНИЕ группы
         {
             try
             {

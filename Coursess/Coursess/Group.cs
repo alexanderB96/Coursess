@@ -66,13 +66,18 @@ namespace Coursess
             aut.DobGroup(this);
         }
 
-        private void DataGroup_CellClick(object sender, DataGridViewCellEventArgs e)
+        //обрабатывает клик по гриду. Используется как костыль.
+        //так как для запросов нужен ID желательно кликать по ячейки в колонке ID
+        //иначе запрос "РУХНЕТ"
+        private void DataGroup_CellClick(object sender, DataGridViewCellEventArgs e) 
         {
             id = Convert.ToString(DataGroup.SelectedCells[0].Value);
                      
             bunifuFlatButton1.Visible = true;
             bunifuFlatButton2.Visible = true;
         }
+
+        //
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
